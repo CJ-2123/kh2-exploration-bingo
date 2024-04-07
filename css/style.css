@@ -294,6 +294,21 @@ th {
 	color:#fff;
 }
 
+#bingoPage #bingo-roguelike-2 tr td:first-child {
+	background:#000811;
+	border:1px #0a245a solid;
+	color:#3c70df;
+	font-size:75%;
+	font-weight:700;
+	width:35px;
+	cursor: default;
+}
+
+#bingoPage #bingo-roguelike-2 tr td:first-child:hover {
+	background:#001a36;
+	color:#fff;
+}
+
 .currentFloor {
 	background:#1448b3 !important;
 	color:#fff !important;

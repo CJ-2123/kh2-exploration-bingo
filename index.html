@@ -27,10 +27,10 @@
 			<div id="about_bingo">
 				<h2>Generate New Card</h2>
 				<div id="sortButtons">
-					<div class="sortButton" href="#" onclick="reseedPage();">Normal Card</div>
-					<div class="sortButton" href="#" onclick="reseedPage('bossrando');">Boss Rando</div>
-					<div class="sortButton" href="#" onclick="reseedPage('kh1');">KH1 Bingo</div>
-					<!-- <div class="sortButton" href="#" onclick="reseedPage('long');">Long Card</div> -->
+					<div class="sortButton" href="#" onclick="reseedPage();">KH2 Rando Bingo</div>
+					<!-- <div class="sortButton" href="#" onclick="reseedPage('bossrando');">Boss Rando</div> -->
+					<div class="sortButton" href="#" onclick="reseedPage('bunter');">KH2 Boss Hunter</div>
+					<div class="sortButton" href="#" onclick="reseedPage('kh1');">KH1 Rando Bingo</div>
 				</div>
 				<div>
 					<label><input id="random-seed" type="radio" name="seed-radio" value="0" onchange="changeSeedRadio(this.value)">Random Seed</label>
@@ -112,10 +112,10 @@
 
 				<h2>Roguelike</h2>
 				<li>When you generate a card, click the START square to begin.</li>
-				<li>If you check a square, you'll be able to see 3 squares on the next row. 1 to the left of it, 1 to the right, and 1 directly below it.</li>
+				<li>If you check a square, you'll be able to see 3 squares on the next row. 1 to the bottom left of it, 1 to the bottom right, and 1 directly below it.</li>
 				<li>If you go to the left and right ends, only 2 squares will be revealed.</li>
-				<li>B8, B12, B16, B20 are forced goals. The next row will be resumed from the previous layer.</li>
-				<li>Check B20 to complete the board.</li>
+				<li>Red layers are forced goals. The next row will be resumed from the previous layer.</li>
+				<li>Check the gold layer to complete the board.</li>
 				<p></p>
 				<p></p>
 
@@ -403,6 +403,104 @@
 					</tr>
 					<tr>
 						<td class="popout" id="bltr">BL-TR</td>
+						<td colspan="5" style="display:none;"></td>
+					</tr>
+				</tbody></table>
+
+				<table class="bingo" id="bingo-roguelike-2"><tbody>
+					<tr>
+						<td class="popout" id="tlbr" hidden>TL-BR</td>
+						<td class="popout" id="col1" hidden>COL1</td>
+						<td class="popout" id="col2" hidden>COL2</td>
+						<td class="popout" id="col3" hidden>COL3</td>
+						<td class="popout" id="col4" hidden>COL4</td>
+						<td class="popout" id="col5" hidden>COL5</td>
+						<td class="popout" id="col6" hidden>COL6</td>
+						<td class="popout" id="col7" hidden>COL7</td>
+					</tr>
+					<tr>
+						<td class="popout" id="row1">B 1</td>
+						<td class="row1 col1 v-hidden b-top b-left" id="slot1"></td> 
+						<td class="row1 col2 v-hidden b-top" id="slot2"></td> 
+						<td class="row1 col3 v-hidden b-top" id="slot3"></td> 
+						<td class="row1 col4" id="slot4"></td> 
+						<td class="row1 col5 v-hidden b-top" id="slot5"></td> 
+						<td class="row1 col6 v-hidden b-top" id="slot6"></td> 
+						<td class="row1 col7 v-hidden b-top b-right" id="slot7"></td> 
+					</tr><tr> 
+						<td class="popout" id="row2">B 2</td>
+						<td class="row2 col1 v-hidden b-left" id="slot8"></td> 
+						<td class="row2 col2 v-hidden" id="slot9"></td> 
+						<td class="row2 col3" id="slot10"></td> 
+						<td class="row2 col4" id="slot11"></td> 
+						<td class="row2 col5" id="slot12"></td> 
+						<td class="row2 col6 v-hidden" id="slot13"></td> 
+						<td class="row2 col7 v-hidden b-right" id="slot14"></td> 
+					</tr><tr> 
+						<td class="popout" id="row3">B 3</td>
+						<td class="row3 col1 v-hidden b-left" id="slot15"></td> 
+						<td class="row3 col2" id="slot16"></td> 
+						<td class="row3 col3" id="slot17"></td> 
+						<td class="row3 col4" id="slot18"></td> 
+						<td class="row3 col5" id="slot19"></td> 
+						<td class="row3 col6" id="slot20"></td> 
+						<td class="row3 col7 v-hidden b-right" id="slot21"></td> 
+					</tr><tr> 
+						<td class="popout" id="row4">B 4</td>
+						<td class="row4 col1" id="slot22"></td> 
+						<td class="row4 col2" id="slot23"></td> 
+						<td class="row4 col3" id="slot24"></td> 
+						<td class="row4 col4" id="slot25"></td> 
+						<td class="row4 col5" id="slot26"></td> 
+						<td class="row4 col6" id="slot27"></td> 
+						<td class="row4 col7" id="slot28"></td> 
+					</tr><tr> 
+						<td class="popout" id="row5">B 5</td>
+						<td class="row5 col1 v-hidden b-left" id="slot29" hidden></td> 
+						<td class="row5 col2 v-hidden" id="slot30" hidden></td> 
+						<td class="row5 col3 v-hidden" id="slot31" hidden></td> 
+						<td class="row5 col4" id="slot32" colspan="7"></td> 
+						<td class="row5 col5 v-hidden" id="slot33" hidden></td> 
+						<td class="row5 col6 v-hidden" id="slot34" hidden></td> 
+						<td class="row5 col7 v-hidden" id="slot35"></td> 
+					</tr><tr> 
+						<td class="popout" id="row6">B 6</td>
+						<td class="row6 col1" id="slot36"></td> 
+						<td class="row6 col2" id="slot37"></td> 
+						<td class="row6 col3" id="slot38"></td> 
+						<td class="row6 col4" id="slot39"></td> 
+						<td class="row6 col5" id="slot40"></td> 
+						<td class="row6 col6" id="slot41"></td> 
+						<td class="row6 col7" id="slot42"></td> 
+					</tr><tr> 
+						<td class="popout" id="row7">B 7</td>
+						<td class="row7 col1 v-hidden b-left" id="slot43" hidden></td> 
+						<td class="row7 col2 v-hidden" id="slot44" hidden></td> 
+						<td class="row7 col3 v-hidden" id="slot45" hidden></td> 
+						<td class="row7 col4" id="slot46" colspan="7"></td> 
+						<td class="row7 col5 v-hidden" id="slot47" hidden></td> 
+						<td class="row7 col6 v-hidden" id="slot48" hidden></td> 
+						<td class="row7 col7 v-hidden" id="slot49" hidden></td> 
+					</tr><tr> 
+						<td class="popout" id="row8">B 8</td>
+						<td class="row8 col1" id="slot50"></td> 
+						<td class="row8 col2" id="slot51"></td> 
+						<td class="row8 col3" id="slot52"></td> 
+						<td class="row8 col4" id="slot53"></td> 
+						<td class="row8 col5" id="slot54"></td> 
+						<td class="row8 col6" id="slot55"></td> 
+						<td class="row8 col7" id="slot56"></td> 
+					</tr><tr> 
+						<td class="popout" id="row9">B 9</td>
+						<td class="row9 col1" id="slot57" hidden></td> 
+						<td class="row9 col2" id="slot58" hidden></td> 
+						<td class="row9 col3" id="slot59" hidden></td> 
+						<td class="row9 col4" id="slot60" colspan="7"></td> 
+						<td class="row9 col5" id="slot61" hidden></td> 
+						<td class="row9 col6" id="slot62" hidden></td> 
+						<td class="row9 col7" id="slot63" hidden></td> 
+					</tr><tr> 
+						<td class="popout v-hidden" id="bltr">BL-TR</td>
 						<td colspan="5" style="display:none;"></td>
 					</tr>
 				</tbody></table>

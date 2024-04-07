@@ -14,12 +14,28 @@ var bingo = function (size) {
   var CUSTOM = gup("custom");
   var TYPE = gup("type");
   var MODE = gup("mode");
-  var SIZE =
-    MODE == "roguelike"
-      ? 13
-      : Number.isInteger(parseInt(gup("size")))
-      ? parseInt(gup("size"))
-      : size;
+  // var SIZE =
+  //   MODE == "roguelike"
+  //     ? 13
+  //     : Number.isInteger(parseInt(gup("size")))
+  //     ? parseInt(gup("size"))
+  //     : size;
+  var SIZE;
+
+  if (MODE == "roguelike" && TYPE == "bunter") {
+    SIZE = 7;
+  } else if (MODE == "roguelike" && TYPE != "bunter") {
+    SIZE = 13;
+  } else if (Number.isInteger(parseInt(gup("size")))) {
+    SIZE = parseInt(gup("size"));
+  } else {
+    SIZE = size;
+  }
+
+  if (TYPE == "bunter" && SIZE == 13) {
+    alert("Cannot play bunter with size 13 board.");
+  }
+
   var START = gup("start");
   var GOAL = gup("goal");
   var LANG = gup("lang");
@@ -36,9 +52,25 @@ var bingo = function (size) {
   const range = (start, end) =>
     [...Array(end - start + 1)].map((_, i) => start + i);
 
-  if (MODE == "roguelike") {
+  if (MODE == "roguelike" && TYPE == "bunter") {
     $("#bingo-standard").remove();
     $("#bingo-large").remove();
+    $("#bingo-roguelike").remove();
+    $(".container").css("width", "1240px");
+    $("#roguelike").prop("checked", true);
+    $("#size5").prop("checked", true);
+    $("#size-radio").hide();
+    $("#exploration-init").hide();
+    // startSlots = [7];
+    // interSlots = [98, 150, 202];
+    // goalSlots = [254];
+    startSlots = [4];
+    interSlots = [32, 46];
+    goalSlots = [60];
+  } else if (MODE == "roguelike" && TYPE != "bunter") {
+    $("#bingo-standard").remove();
+    $("#bingo-large").remove();
+    $("#bingo-roguelike-2").remove();
     $(".container").css("width", "1800px");
     $("#roguelike").prop("checked", true);
     $("#size5").prop("checked", true);
@@ -63,6 +95,7 @@ var bingo = function (size) {
     if (SIZE == 13) {
       $("#bingo-standard").remove();
       $("#bingo-roguelike").remove();
+      $("#bingo-roguelike-2").remove();
       $(".container").css("width", "1800px");
       $("#size13").prop("checked", true);
       slots = range(1, 169);
@@ -73,6 +106,7 @@ var bingo = function (size) {
     } else if (SIZE == 3) {
       $("#bingo-large").remove();
       $("#bingo-roguelike").remove();
+      $("#bingo-roguelike-2").remove();
       $("#size3").prop("checked", true);
       slots = [1, 2, 3, 6, 7, 8, 11, 12, 13];
       defaultStartSlots = [1, 13];
@@ -81,6 +115,7 @@ var bingo = function (size) {
     } else if (SIZE == 4) {
       $("#bingo-large").remove();
       $("#bingo-roguelike").remove();
+      $("#bingo-roguelike-2").remove();
       $("#size4").prop("checked", true);
       slots = [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19];
       defaultStartSlots = [7, 13];
@@ -89,6 +124,7 @@ var bingo = function (size) {
     } else {
       $("#bingo-large").remove();
       $("#bingo-roguelike").remove();
+      $("#bingo-roguelike-2").remove();
       $("#size5").prop("checked", true);
       slots = range(1, 25);
       defaultStartSlots = [7, 19];
@@ -173,6 +209,9 @@ var bingo = function (size) {
       break;
     case "kh1":
       cardtype = "KH1-Bingo";
+      break;
+    case "bunter":
+      cardtype = "Bunter";
       break;
     default:
       cardtype = "Normal";
@@ -417,6 +456,75 @@ var bingo = function (size) {
     }
   );
 
+  $("#bingo-roguelike-2 tr").on(
+    "click",
+    "td:not(.popout):not(.hidden):not(.disabled)",
+    function () {
+      $(this).addClass("disabled");
+
+      if ($(this).hasClass("bluesquare")) {
+        $(this).removeClass("bluesquare");
+        $(this).addClass("blue");
+      } else if ($(this).hasClass("redsquare")) {
+        $(this).removeClass("redsquare");
+        $(this).addClass("red");
+      } else if ($(this).hasClass("yellowsquare")) {
+        $(this).removeClass("yellowsquare");
+        $(this).addClass("yellow");
+      }
+      $(this).addClass("greensquare");
+
+      var slot = parseInt($(this).attr("id").slice(4));
+
+      if ($("#slot" + slot).hasClass("row4")) {
+        $("#slot" + (slot + SIZE)).attr("id", "slotTemp");
+        $("#slot32").attr("id", "slot" + (slot + SIZE));
+        $("#slotTemp").attr("id", "slot32");
+      } else if ($("#slot" + slot).hasClass("row6")) {
+        $("#slot" + (slot + SIZE)).attr("id", "slotTemp");
+        $("#slot46").attr("id", "slot" + (slot + SIZE));
+        $("#slotTemp").attr("id", "slot46");
+        // } else if ($("#slot" + slot).hasClass("row15")) {
+        //   $("#slot" + (slot + SIZE)).attr("id", "slotTemp");
+        //   $("#slot202").attr("id", "slot" + (slot + SIZE));
+        //   $("#slotTemp").attr("id", "slot202");
+      } else if ($("#slot" + slot).hasClass("row8")) {
+        $("#slot" + (slot + SIZE)).attr("id", "slotTemp");
+        $("#slot60").attr("id", "slot" + (slot + SIZE));
+        $("#slotTemp").attr("id", "slot60");
+      }
+
+      // maybe unhide more goals
+      // dividable by 5? nothing to the right
+      if (slot % SIZE != 0) {
+        $("#slot" + (slot + SIZE + 1)).removeClass("hidden");
+      }
+      // nothing to the left
+      if (slot % SIZE != 1) {
+        $("#slot" + (slot + SIZE - 1)).removeClass("hidden");
+      }
+      // top down doesn't matter
+      $("#slot" + (slot + SIZE)).removeClass("hidden");
+
+      var row =
+        slot % SIZE != 0
+          ? Math.floor(slot / SIZE) + 1
+          : Math.floor(slot / SIZE);
+
+      $("#row" + row).addClass("currentFloor");
+      if (row != 1) {
+        $("#row" + (row - 1)).removeClass("currentFloor");
+      }
+
+      for (i = 1; i <= 63; i++) {
+        if (i != slot && $("#slot" + i).hasClass("row" + row)) {
+          $("#slot" + i).addClass("disabled");
+          $("#slot" + i).addClass("gray");
+        }
+      }
+    }
+  );
+
   $("#exploration-init-table tr").on("click", "td", function () {
     if ($(this).text() == "S") {
       $(this).text("G").removeClass("bluesquare").addClass("yellowsquare");
@@ -427,8 +535,18 @@ var bingo = function (size) {
     }
   });
 
-  if (MODE == "roguelike") {
+  if (MODE == "roguelike" && TYPE != "bunter") {
     for (i = 1; i <= 260; i++) {
+      if (startSlots.includes(i)) {
+        $("#slot" + i).addClass("bluesquare");
+      } else if (interSlots.includes(i)) {
+        $("#slot" + i).addClass("redsquare");
+      } else if (goalSlots.includes(i)) {
+        $("#slot" + i).addClass("yellowsquare");
+      }
+    }
+  } else if (MODE == "roguelike" && TYPE == "bunter") {
+    for (i = 1; i <= 63; i++) {
       if (startSlots.includes(i)) {
         $("#slot" + i).addClass("bluesquare");
       } else if (interSlots.includes(i)) {
@@ -844,6 +962,10 @@ var bingo = function (size) {
       var bingoBoard = kh1goals;
       console.log(bingoBoard);
       break;
+    case "Bunter":
+      var bingoBoard = bunterList;
+      console.log(bingoBoard);
+      break;
     default:
       var bingoBoard = masterGoalList;
       console.log(bingoBoard);
@@ -853,7 +975,23 @@ var bingo = function (size) {
 
   bingoBoard = shuffleArray(bingoBoard);
 
-  if (MODE == "roguelike") {
+  if (MODE == "roguelike" && TYPE == "bunter") {
+    var j = 1;
+    for (i = 1; i <= 63; i++) {
+      if (startSlots.includes(i)) {
+        $("#slot" + i).append("START");
+      } else if (!$("#slot" + i).hasClass("v-hidden")) {
+        $("#slot" + i).append(bingoBoard[j - 1].name);
+        j++;
+        // if (EXPLORATION == "1" && !startSlots.includes(i)) {
+        if (!startSlots.includes(i)) {
+          $("#slot" + i).addClass("hidden");
+        }
+        //$('#slot'+i).append("<br/>" + bingoBoard[i].types.toString());
+        //$('#slot'+i).append("<br/>" + bingoBoard[i].synergy);
+      }
+    }
+  } else if (MODE == "roguelike" && TYPE != "bunter") {
     //populate the actual table on the page
     var j = 1;
     for (i = 1; i <= 260; i++) {
