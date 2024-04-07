@@ -2,7 +2,9 @@
 
 Generator for Kingdom Hearts 2 Exploration Bingo.
 
-To use, open "index.html"
+https://cj-2123.github.io/kh2-exploration-bingo/
+
+To use locally, open "index.html"
 Instructions and info are on the page.
 
 Goals can be edited in the "kh_goals.js" file.
