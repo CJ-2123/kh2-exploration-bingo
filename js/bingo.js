@@ -213,6 +213,9 @@ var bingo = function (size) {
     case "bunter":
       cardtype = "Bunter";
       break;
+    case "combo":
+      cardtype = "Combo";
+      break;
     default:
       cardtype = "Normal";
   }
@@ -964,6 +967,10 @@ var bingo = function (size) {
       break;
     case "Bunter":
       var bingoBoard = bunterList;
+      console.log(bingoBoard);
+      break;
+    case "Combo":
+      var bingoBoard = comboList;
       console.log(bingoBoard);
       break;
     default:
