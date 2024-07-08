@@ -251,36 +251,36 @@ var bingo = function (size) {
       "2️⃣",
       "3️⃣",
     ];
-    var result =
-      SEED +
-      " " +
-      cardtype +
-      "\r\n||#️⃣" +
-      digits.slice(0, SIZE).join("") +
-      "\r\n";
-    var j = 0;
-    slots.forEach((slot, i) => {
-      if (SIZE == 3 || SIZE == 4 ? slot % 5 == 1 : slot % SIZE == 1) {
-        result = result + digits[j];
-        j++;
-      }
+    var result = SEED;
+    // SEED +
+    // " " +
+    //   cardtype +
+    //   "\r\n||#️⃣" +
+    //   digits.slice(0, SIZE).join("") +
+    //   "\r\n";
+    // var j = 0;
+    // slots.forEach((slot, i) => {
+    //   if (SIZE == 3 || SIZE == 4 ? slot % 5 == 1 : slot % SIZE == 1) {
+    //     result = result + digits[j];
+    //     j++;
+    //   }
 
-      if ($("#slot" + slot).hasClass("greensquare")) {
-        result = result + "🟩";
-      } else if ($("#slot" + slot).hasClass("redsquare")) {
-        result = result + "🟥";
-      } else {
-        result = result + "⬜";
-      }
+    //   if ($("#slot" + slot).hasClass("greensquare")) {
+    //     result = result + "🟩";
+    //   } else if ($("#slot" + slot).hasClass("redsquare")) {
+    //     result = result + "🟥";
+    //   } else {
+    //     result = result + "⬜";
+    //   }
 
-      if (SIZE == 3 || SIZE == 4 ? slot % 5 == SIZE : slot % SIZE == 0) {
-        if (i != slots.length - 1) {
-          result = result + "\r\n";
-        } else {
-          result = result + "||";
-        }
-      }
-    });
+    //   if (SIZE == 3 || SIZE == 4 ? slot % 5 == SIZE : slot % SIZE == 0) {
+    //     if (i != slots.length - 1) {
+    //       result = result + "\r\n";
+    //     } else {
+    //       result = result + "||";
+    //     }
+    //   }
+    // });
 
     navigator.clipboard.writeText(result).then(() => {
       $("#copyResultButton").text("✓");
