@@ -204,11 +204,14 @@ var bingo = function (size) {
     case "long":
       cardtype = "Long";
       break;
+    case "kh2":
+      cardtype = "KH2";
+      break;
     case "bossrando":
       cardtype = "Boss-Rando";
       break;
     case "kh1":
-      cardtype = "KH1-Bingo";
+      cardtype = "KH1";
       break;
     case "bunter":
       cardtype = "Bunter";
@@ -988,7 +991,7 @@ var bingo = function (size) {
       var bingoBoard = bossRandoList;
       console.log(bingoBoard);
       break;
-    case "KH1-Bingo":
+    case "KH1":
       var bingoBoard = kh1goals;
       console.log(bingoBoard);
       break;
