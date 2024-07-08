@@ -325,6 +325,15 @@ var bingo = function (size) {
   );
 
   $("#bingo-standard tr").on(
+    "contextmenu",
+    "td:not(.popout):not(.hidden)",
+    function (e) {
+      e.preventDefault();
+      $(this).toggleClass("starred");
+    }
+  );
+
+  $("#bingo-standard tr").on(
     "click",
     "td:not(.popout):not(.hidden)",
     function () {
@@ -359,6 +368,15 @@ var bingo = function (size) {
     }
   );
 
+  $("#bingo-large tr").on(
+    "contextmenu",
+    "td:not(.popout):not(.hidden)",
+    function (e) {
+      e.preventDefault();
+      $(this).toggleClass("starred");
+    }
+  );
+
   $("#bingo-large tr").on("click", "td:not(.popout):not(.hidden)", function () {
     if ($(this).hasClass("greensquare")) {
       $(this).removeClass("greensquare").addClass("redsquare");
@@ -389,6 +407,15 @@ var bingo = function (size) {
       $("#slot" + (slot - SIZE)).removeClass("hidden");
     }
   });
+
+  $("#bingo-roguelike tr").on(
+    "contextmenu",
+    "td:not(.popout):not(.hidden):not(.disabled)",
+    function (e) {
+      e.preventDefault();
+      $(this).toggleClass("starred");
+    }
+  );
 
   $("#bingo-roguelike tr").on(
     "click",

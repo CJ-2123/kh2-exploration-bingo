@@ -482,3 +482,18 @@ th {
 	transform: rotate(360deg);
 }
 }
+
+.starred {
+    position: relative;
+  }
+
+  .starred::after {
+    content: "★";
+    position: absolute;
+    top: 13%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: gold;
+  }
+  
