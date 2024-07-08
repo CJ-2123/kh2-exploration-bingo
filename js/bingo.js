@@ -1,3 +1,36 @@
+// Custom json list
+let customList = null;
+let fileContent = "";
+
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("fileInput")
+    .addEventListener("change", handleFileSelect);
+});
+
+// File uploader for custom lists
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      fileContent = e.target.result;
+      console.log("File content loaded:", fileContent);
+      if (fileContent) {
+        try {
+          sessionStorage.setItem("customList", fileContent);
+          console.log(sessionStorage.getItem("customList"));
+        } catch (err) {
+          console.error("Error parsing JSON:", err);
+        }
+      } else {
+        console.log("No file selected or file is empty");
+      }
+    };
+    reader.readAsText(file);
+  }
+}
+
 var bingo = function (size) {
   if (typeof size == "undefined") size = 5;
 
@@ -39,6 +72,27 @@ var bingo = function (size) {
   var START = gup("start");
   var GOAL = gup("goal");
   var LANG = gup("lang");
+
+  // Check that custom list meets size requirements
+  customList = JSON.parse(sessionStorage.getItem("customList"));
+  if (TYPE == "custom" && customList == null) {
+    alert("No file selected or file is empty");
+  }
+
+  if (TYPE === "custom") {
+    const sizeRequirements = {
+      13: 169,
+      5: 25,
+      4: 16,
+      3: 9,
+    };
+
+    if (customList.length < sizeRequirements[SIZE]) {
+      alert(
+        "Not enough goals to meet the size requirements for selected settings."
+      );
+    }
+  }
 
   var slots = [];
   var defaultStartSlots = [];
@@ -218,6 +272,9 @@ var bingo = function (size) {
       break;
     case "combo":
       cardtype = "Combo";
+      break;
+    case "custom":
+      cardtype = "Custom";
       break;
     default:
       cardtype = "Normal";
@@ -1002,6 +1059,10 @@ var bingo = function (size) {
     case "Combo":
       var bingoBoard = comboList;
       console.log(bingoBoard);
+      break;
+    case "Custom":
+      var bingoBoard = customList;
+      console.log(customList);
       break;
     default:
       var bingoBoard = masterGoalList;

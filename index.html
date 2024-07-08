@@ -35,6 +35,14 @@
 					<div class="sortButton" href="#" onclick="reseedPage('kh1');">KH1 Rando Bingo</div>
 					<div class="sortButton" href="#" onclick="reseedPage('combo');">KH1+2 Rando Bingo</div>
 				</div>
+				<p></p>
+				<div id="sortButtons">
+					<form action="" method="post" enctype="multipart/form-data">
+						<input id="fileInput" type="file" name="custom-file" accept=".json" >
+						<div class="sortButton" id="submitButton" href="#" onclick="reseedPage('custom');">Custom</div>
+					</form>
+				</div>
+				<p></p>
 				<div>
 					<label><input id="random-seed" type="radio" name="seed-radio" value="0" onchange="changeSeedRadio(this.value)">Random Seed</label>
 					<label><input id="custom-seed" type="radio" name="seed-radio" value="1" onchange="changeSeedRadio(this.value)">Custom Seed</label>
