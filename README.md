@@ -51,6 +51,39 @@ Roguelike
 - Right click to mark squares with stars.
 - Popout a specific row or column by clicking on it (Standard Bingo only).
 - JSON formatting for standard bingos to use on Bingosync.
+- Upload your own bingo .json file for custom goals.
+
+## Custom Bingo Lists
+
+![Bingo Board](/img/custom.jpg "Custom Bingo Lists")
+
+### How to use custom bingo lists:
+
+1. Click "Choose File" and select your .json bingo list
+2. Set your settings to whatever you like (seed, bingo mode, and board size)
+3. Click the "Custom" button to generate a board from your goal list
+
+The list will stay uploaded to the site until you close the page or browser, or until you upload a different list.
+
+### Requirements
+
+Bingo File:
+
+- The .json bingo file must be formatted as follows:
+
+`[ {"name": "Goal 1"},
+{"name": "Goal 2"},
+{"name": "Goal 3"},
+{"name": "Goal 4"},
+...]`
+
+Size Requirements:
+
+- 3x3 needs at least 9 goals
+- 4x4 needs at least 16 goals
+- 5x5 needs at least 25 goals
+- 13x13 needs at least 169 goals
+- Roguelike needs at least 260 goals
 
 # Local Use
 
