@@ -276,6 +276,15 @@ var bingo = function (size) {
     case "custom":
       cardtype = "Custom";
       break;
+    case "terra":
+      cardtype = "BBS Terra";
+      break;
+    case "aqua":
+      cardtype = "BBS Aqua";
+      break;
+    case "ven":
+      cardtype = "BBS Ven";
+      break;
     default:
       cardtype = "Normal";
   }
@@ -1062,6 +1071,18 @@ var bingo = function (size) {
       break;
     case "Custom":
       var bingoBoard = customList;
+      console.log(customList);
+      break;
+    case "BBS Terra":
+      var bingoBoard = terra;
+      console.log(customList);
+      break;
+    case "BBS Aqua":
+      var bingoBoard = aqua;
+      console.log(customList);
+      break;
+    case "BBS Ven":
+      var bingoBoard = ventus;
       console.log(customList);
       break;
     default:
