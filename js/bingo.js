@@ -556,6 +556,15 @@ var bingo = function (size) {
   );
 
   $("#bingo-roguelike-2 tr").on(
+    "contextmenu",
+    "td:not(.popout):not(.hidden):not(.disabled)",
+    function (e) {
+      e.preventDefault();
+      $(this).toggleClass("starred");
+    }
+  );
+
+  $("#bingo-roguelike-2 tr").on(
     "click",
     "td:not(.popout):not(.hidden):not(.disabled)",
     function () {
