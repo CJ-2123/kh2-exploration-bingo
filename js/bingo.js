@@ -63,12 +63,17 @@ var bingo = function (size) {
     SIZE = size;
   }
 
+  // Check that custom list meets size requirements
+  customList = JSON.parse(sessionStorage.getItem("customList"));
+  if (TYPE == "custom" && customList == null) {
+    alert("No file selected or file is empty");
+  }
+
   if (TYPE === "custom") {
     const sizeRequirements = {
-      20: 260,
-      15: 135,
       13: 169,
-      9: 63,
+      9: 135,
+      7: 63,
       5: 25,
       4: 16,
       3: 9,
@@ -108,29 +113,6 @@ var bingo = function (size) {
   var START = gup("start");
   var GOAL = gup("goal");
   var LANG = gup("lang");
-
-  // Check that custom list meets size requirements
-  customList = JSON.parse(sessionStorage.getItem("customList"));
-  if (TYPE == "custom" && customList == null) {
-    alert("No file selected or file is empty");
-  }
-
-  if (TYPE === "custom") {
-    const sizeRequirements = {
-      13: 169,
-      9: 135,
-      7: 63,
-      5: 25,
-      4: 16,
-      3: 9,
-    };
-
-    if (customList.length < sizeRequirements[SIZE]) {
-      alert(
-        "Not enough goals to meet the size requirements for selected settings."
-      );
-    }
-  }
 
   var slots = [];
   var defaultStartSlots = [];
