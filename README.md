@@ -35,13 +35,14 @@ Exploration
 
 Roguelike
 
-- Generates a 20 layered board with a start square at the top and a goal square at the bottom
+- Generates a multi-layered board with a start square at the top and a goal square at the bottom
   - 9 layered board if playing KH2 Boss Hunter.
 - Each layer reveals 3 squares. Complete one to move on to the next layer.
 - The next layer will reveal the square directly below and the squares to the bottom left and the bottom right.
   - The left and right end squares will only reveal 2 squares.
 - Red layers and the gold layer are single forced goals. The next layer will be resumed from the previous layer's position.
 - Complete the gold layer to win.
+- Board sizes: 9 layers, 15 layers, 20 layers
 
 ![Bingo Board](/img/roguelike.jpg "Roguelike Bingo")
 
@@ -71,11 +72,17 @@ Bingo File:
 
 - The .json bingo file must be formatted as follows:
 
-`[ {"name": "Goal 1"},
-{"name": "Goal 2"},
-{"name": "Goal 3"},
-{"name": "Goal 4"},
-...]`
+```
+[
+  {"name": "Goal 1"},
+  {"name": "Goal 2"},
+  {"name": "Goal 3"},
+  {"name": "Goal 4"},
+  .
+  .
+  .
+]
+```
 
 Size Requirements:
 
@@ -83,7 +90,9 @@ Size Requirements:
 - 4x4 needs at least 16 goals
 - 5x5 needs at least 25 goals
 - 13x13 needs at least 169 goals
-- Roguelike needs at least 260 goals
+- Roguelike 9 layers needs at least 63 goals
+- Roguelike 15 layers needs at least 135 goals
+- Roguelike 20 layers needs at least 260 goals
 
 # Local Use
 
