@@ -26,28 +26,6 @@
 
 			<div id="about_bingo">
 				<h2>Generate New Card</h2>
-				<div id="sortButtons">
-					<div class="sortButton" href="#" onclick="reseedPage('kh2');">KH2 Rando Bingo</div>
-					<!-- <div class="sortButton" href="#" onclick="reseedPage('bossrando');">Boss Rando</div> -->
-					<div class="sortButton" href="#" onclick="reseedPage('bunter');">KH2 Boss Hunter</div>
-				</div>
-				<div id="sortButtons">
-					<div class="sortButton" href="#" onclick="reseedPage('kh1');">KH1 Rando Bingo</div>
-					<div class="sortButton" href="#" onclick="reseedPage('combo');">KH1+2 Rando Bingo</div>
-				</div>
-				<div id="sortButtons">
-					<div class="sortButton" href="#" onclick="reseedPage('terra');">BBS Terra</div>
-					<div class="sortButton" href="#" onclick="reseedPage('ven');">BBS Ven</div>
-					<div class="sortButton" href="#" onclick="reseedPage('aqua');">BBS Aqua</div>
-				</div>
-				<p></p>
-				<div id="sortButtons">
-					<form action="" method="post" enctype="multipart/form-data">
-						<input id="fileInput" type="file" name="custom-file" accept=".json" >
-						<div class="sortButton" id="submitButton" href="#" onclick="reseedPage('custom');">Custom</div>
-					</form>
-				</div>
-				<p></p>
 				<div>
 					<label><input id="random-seed" type="radio" name="seed-radio" value="0" onchange="changeSeedRadio(this.value)">Random Seed</label>
 					<label><input id="custom-seed" type="radio" name="seed-radio" value="1" onchange="changeSeedRadio(this.value)">Custom Seed</label>
@@ -69,6 +47,60 @@
 					<label><input id="size15" type="radio" name="size-radio" value="15" onchange="changeSizeRadio(this.value)">B15</label>
 					<label><input id="size20" type="radio" name="size-radio" value="20" onchange="changeSizeRadio(this.value)">B20</label>
 				</div>
+				<p></p>
+				<!-- <div id="sortButtons">
+					<div class="sortButton" href="#" onclick="reseedPage('kh2');">KH2 Rando Bingo</div>
+					<div class="sortButton" href="#" onclick="reseedPage('bunter');">KH2 Boss Hunter</div>
+				</div>
+				<div id="sortButtons">
+					<div class="sortButton" href="#" onclick="reseedPage('kh1');">KH1 Rando Bingo</div>
+					<div class="sortButton" href="#" onclick="reseedPage('combo');">KH1+2 Rando Bingo</div>
+				</div>
+				<div id="sortButtons">
+					<div class="sortButton" href="#" onclick="reseedPage('terra');">BBS Terra</div>
+					<div class="sortButton" href="#" onclick="reseedPage('ven');">BBS Ven</div>
+					<div class="sortButton" href="#" onclick="reseedPage('aqua');">BBS Aqua</div>
+				</div> -->
+				<div id="sortDropdown">
+					<p>Kingdom Hearts 2</p>
+					<select onchange="reseedPage(this.value)">
+						<option value="">Select an option</option>
+						<option value="kh2">KH2 Rando Bingo</option>
+						<option value="bunter">Boss Hunter</option>
+					</select>
+					<p></p>
+					<p>Other KH Games</p>
+					<select onchange="reseedPage(this.value)">
+						<option value="">Select an option</option>
+						<option value="kh1">KH1 Rando Bingo</option>
+						<option value="terra">BBS Terra</option>
+						<option value="ven">BBS Ven</option>
+						<option value="aqua">BBS Aqua</option>
+					</select>
+					<!-- <p></p>
+					<p>Birth By Sleep</p>
+					<select onchange="reseedPage(this.value)">
+						<option value="">Select an option</option>
+						<option value="terra">Terra</option>
+						<option value="ven">Ven</option>
+						<option value="aqua">Aqua</option>
+					</select> -->
+					<p></p>
+					<p>Combo</p>
+					<select onchange="reseedPage(this.value)">
+						<option value="">Select an option</option>
+						<option value="combo">KH1 + 2 Bingo</option>
+					</select>
+				</div>
+				<p></p>
+				<p id="custom-btn">Custom List</p>
+				<div id="sortButtons">
+					<form action="" method="post" enctype="multipart/form-data">
+						<input id="fileInput" type="file" name="custom-file" accept=".json" >
+						<div class="sortButton" id="submitButton" href="#" onclick="reseedPage('custom');">Generate Custom List</div>
+					</form>
+				</div>
+				<p></p>
 				
 				<div id="exploration-init">
 					<table id="exploration-init-table"><tbody>
@@ -129,6 +161,7 @@
 				<li>B9: at least 38</li>
 				<li>B15: at least 82</li>
 				<li>B20: at least 169</li>
+				<p></p>
 				<p></p>
 
 				<!-- <h2>Standard</h2>
