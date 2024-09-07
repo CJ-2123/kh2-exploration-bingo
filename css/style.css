@@ -515,4 +515,5 @@ th {
 
 #sortDropdown select option {
 	cursor: pointer;
+	font-weight: bold;
 }

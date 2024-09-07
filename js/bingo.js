@@ -336,6 +336,9 @@ var bingo = function (size) {
     case "ven":
       cardtype = "BBS Ven";
       break;
+    case "kh3":
+      cardtype = "KH3";
+      break;
     default:
       cardtype = "Normal";
   }
@@ -1240,6 +1243,9 @@ var bingo = function (size) {
       break;
     case "BBS Ven":
       var bingoBoard = ventus;
+      break;
+    case "KH3":
+      var bingoBoard = kh3goals;
       break;
     default:
       var bingoBoard = masterGoalList;
