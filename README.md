@@ -90,9 +90,9 @@ Size Requirements:
 - 4x4 needs at least 16 goals
 - 5x5 needs at least 25 goals
 - 13x13 needs at least 169 goals
-- Roguelike 9 layers needs at least 63 goals
-- Roguelike 15 layers needs at least 135 goals
-- Roguelike 20 layers needs at least 260 goals
+- Roguelike 9 layers needs at least 38 goals
+- Roguelike 15 layers needs at least 82 goals
+- Roguelike 20 layers needs at least 169 goals
 
 # Local Use
 

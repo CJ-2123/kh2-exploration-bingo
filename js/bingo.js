@@ -71,9 +71,10 @@ var bingo = function (size) {
 
   if (TYPE === "custom") {
     const sizeRequirements = {
+      20: 169,
+      15: 82,
       13: 169,
-      9: 135,
-      7: 63,
+      9: 38,
       5: 25,
       4: 16,
       3: 9,
@@ -1218,42 +1219,33 @@ var bingo = function (size) {
     // 	break;
     case "Boss-Rando":
       var bingoBoard = bossRandoList;
-      console.log(bingoBoard);
       break;
     case "KH1":
       var bingoBoard = kh1goals;
-      console.log(bingoBoard);
       break;
     case "Bunter":
       var bingoBoard = bunterList;
-      console.log(bingoBoard);
       break;
     case "Combo":
       var bingoBoard = comboList;
-      console.log(bingoBoard);
       break;
     case "Custom":
       var bingoBoard = customList;
-      console.log(customList);
       break;
     case "BBS Terra":
       var bingoBoard = terra;
-      console.log(bingoBoard);
       break;
     case "BBS Aqua":
       var bingoBoard = aqua;
-      console.log(bingoBoard);
       break;
     case "BBS Ven":
       var bingoBoard = ventus;
-      console.log(bingoBoard);
       break;
     default:
       var bingoBoard = masterGoalList;
-      console.log(bingoBoard);
   }
 
-  console.log(bingoBoard);
+  //console.log(bingoBoard);
 
   bingoBoard = shuffleArray(bingoBoard);
 
