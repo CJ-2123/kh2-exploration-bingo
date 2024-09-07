@@ -14,6 +14,10 @@ The page defaults to KH2 Rando Bingo Standard 5x5 Random Seed.
 2. Select a bingo list from the drop down menus
 3. When you select a list, a board will generate with the settings and list you selected
 
+- If you select "Exploration", a mini bingo board will appear below the "Generate Custom List" button. Use it to set your starting squares, signified with an S, and goal squares if wanted, signified with a G.
+- Right clicking a square will mark it with a star
+- For standard bingo, click on a Row or Col or Diagonal header to popout those goals.
+
 For using your own list, see the "Custom Bingo Lists" section.
 
 # Overview of Features
@@ -25,6 +29,7 @@ This board supports multiple Kingdom Hearts games with a variety of board types 
 - Kingdom Hearts 1 Randomizer
 - Kingdom Hearts 2 Randomizer
 - Kingdom Hearts 2 Boss Hunter (Boss goals only)
+- Kingdom Hearts 3 Randomizer
 - Birth By Sleep Terra, Ventus, and Aqua
 - Kingdom Hearts 1 and 2 Combined
 
@@ -38,6 +43,7 @@ Standard
 Exploration
 
 - Generates a board with hidden squares and predetermined visible squares.
+- Clicking a goal will reveal the squares to the left, right, top, and bottom of it.
 - Ability to choose your visible starting squares.
 - Ability to also choose goal squares (gold colored squares).
 - Board sizes: 5x5, 4x4, 3x3, 13x13
@@ -61,9 +67,11 @@ Roguelike
 
 - Seeded boards for sharing with others.
 - Right click to mark squares with stars.
-- Popout a specific row or column by clicking on it (Standard Bingo only).
 - JSON formatting for standard bingos to use on Bingosync.
 - Upload your own bingo .json file for custom goals.
+- Popout a specific row or column by clicking on it (Standard Bingo only).
+
+![Bingo Board](/img/popout.jpg "Popout Window")
 
 ## Custom Bingo Lists
 
@@ -73,7 +81,7 @@ Roguelike
 
 1. Click "Choose File" and select your .json bingo list
 2. Set your settings to whatever you like (seed, bingo mode, and board size)
-3. Click the "Custom" button to generate a board from your goal list
+3. Click the "Generate Custom List" button to generate a board from your goal list
 
 The list will stay uploaded to the site until you close the page or browser, or until you upload a different list.
 
@@ -89,9 +97,7 @@ Bingo File:
   {"name": "Goal 2"},
   {"name": "Goal 3"},
   {"name": "Goal 4"},
-  .
-  .
-  .
+  // more goals here
 ]
 ```
 
