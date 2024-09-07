@@ -6,6 +6,16 @@ https://cj-2123.github.io/kh2-exploration-bingo/
 
 ![Bingo Board](/img/bingo.jpg "Bingo")
 
+# Instructions
+
+The page defaults to KH2 Rando Bingo Standard 5x5 Random Seed.
+
+1. Select settings using the radio buttons under "Generate New Card"
+2. Select a bingo list from the drop down menus
+3. When you select a list, a board will generate with the settings and list you selected
+
+For using your own list, see the "Custom Bingo Lists" section.
+
 # Overview of Features
 
 This board supports multiple Kingdom Hearts games with a variety of board types and features.
@@ -15,6 +25,7 @@ This board supports multiple Kingdom Hearts games with a variety of board types 
 - Kingdom Hearts 1 Randomizer
 - Kingdom Hearts 2 Randomizer
 - Kingdom Hearts 2 Boss Hunter (Boss goals only)
+- Birth By Sleep Terra, Ventus, and Aqua
 - Kingdom Hearts 1 and 2 Combined
 
 ## Bingo Board Types
@@ -103,7 +114,7 @@ Goals can be edited in the "kh_goals.js" file.
 
 # Credits
 
-Kingdom Hearts 1 Bingo Goals created by the KH1 Rando Community: https://discord.gg/xPPCNDPdmG
+Kingdom Hearts 1 Bingo Goals created by the KH1 Rando Community: https://discord.gg/xPPCNDPdmG with their google sheets based generator: https://docs.google.com/spreadsheets/d/1v44eTIGJwF9aWlIVuuu6S1GxV2LNB39yG8mYXZc9GE8/edit#gid=930275297
 
 Kingdom Hearts 2 Bingo Goals created by the KH2 Rando Community: https://discord.com/invite/KH2FMRando
 
