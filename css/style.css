@@ -497,8 +497,16 @@ th {
     color: gold;
   }
 
-#sortDropdown p, #custom-btn {
-	color: white;
+#sortDropdown {
+	margin-left: 25px;
+  	margin-right: auto;
+	margin-top: 25px;
+  	width: 40%;
+}
+
+#exploration-init, #bingo-info {
+	margin-left: 25px;
+  	margin-right: auto;
 }
 
 #sortDropdown select {
@@ -511,6 +519,7 @@ th {
 	color: white;
 	font-weight: bold;
 	text-shadow: black 1px 1px 1px;
+	width: 200px;
 }
 
 #sortDropdown select option {

@@ -138,6 +138,8 @@
     display: block;
     padding-top: 3px;
     padding-bottom: 3px;
+    margin-left: 25px;
+  	margin-right: auto;
 }
 
 #bingosync-goals {

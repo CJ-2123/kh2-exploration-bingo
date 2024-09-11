@@ -292,7 +292,7 @@ var bingo = function (size) {
 
   $("#seed").val(SEED);
 
-  if (SEED == "" || isNaN(SEED)) return reseedPage(TYPE);
+  //if (SEED == "" || isNaN(SEED)) return reseedPage(TYPE);
 
   var cardtype = "string";
 
@@ -348,7 +348,7 @@ var bingo = function (size) {
   // Get seed and card type
   var results = $("#results");
   results.append(
-    "<img src='img/en.png' alt='English' onclick='translateToEN();'><img src='img/jp.png' alt='Japanese' onclick='translateToJP();'><p>Seed: <strong>" +
+    "<p>Seed: <strong>" +
       SEED +
       "</strong>&emsp;Card type: <strong>" +
       cardtype +
@@ -1457,7 +1457,16 @@ function reseedPage(type) {
   }
 
   window.location =
-    qSeed + qCustom + qType + qMode + qSize + qStart + qGoal + qLang;
+    "bingo.html" +
+    qSeed +
+    qCustom +
+    qType +
+    qMode +
+    qSize +
+    qStart +
+    qGoal +
+    qLang;
+
   return false;
 }
 
@@ -1467,6 +1476,66 @@ function changeSeedRadio(isCustom) {
   } else {
     $("#seed").prop("disabled", true);
   }
+}
+
+function changeGame(selectedGame) {
+  const objectivesSelect = document.getElementById("type");
+  const customUpload = document.getElementById("customUpload");
+
+  // Game categories
+  const gameOptions = {
+    kingdomhearts2: {
+      options: `
+        <option value="kh2" selected="selected">Default</option>
+        <option value="bunter">Boss Hunter</option>
+      `,
+      customUpload: "",
+    },
+    kingdomhearts1: {
+      options: `
+        <option value="kh1" selected="selected">Default</option>
+      `,
+      customUpload: "",
+    },
+    kingdomhearts3: {
+      options: `
+        <option value="kh3" selected="selected">Default</option>
+      `,
+      customUpload: "",
+    },
+    birthbysleep: {
+      options: `
+        <option value="terra" selected="selected">Terra</option>
+        <option value="ven">Ventus</option>
+        <option value="aqua">Aqua</option>
+      `,
+      customUpload: "",
+    },
+    combogames: {
+      options: `
+        <option value="combo" selected="selected">KH 1 + 2</option>
+      `,
+      customUpload: "",
+    },
+    userCustom: {
+      options: `
+        <option value="custom" selected="selected">Upload a file</option>
+      `,
+      customUpload:
+        '<input id="fileInput" type="file" name="custom-file" accept=".json">',
+    },
+    "": {
+      options: `
+        <option value="" selected="selected"></option>
+      `,
+      customUpload: "",
+    },
+  };
+
+  // Set objectives and custom upload status
+  const selectedOptions = gameOptions[selectedGame] || gameOptions[""];
+  objectivesSelect.innerHTML = selectedOptions.options;
+  customUpload.innerHTML = selectedOptions.customUpload;
 }
 
 function changeModeRadio() {
