@@ -2,12 +2,6 @@
 let customList = null;
 let fileContent = "";
 
-document.addEventListener("DOMContentLoaded", () => {
-  document
-    .getElementById("fileInput")
-    .addEventListener("change", handleFileSelect);
-});
-
 // File uploader for custom lists
 function handleFileSelect(event) {
   const file = event.target.files[0];
@@ -1570,6 +1564,14 @@ function changeGame(selectedGame) {
   const selectedOptions = gameOptions[selectedGame] || gameOptions[""];
   objectivesSelect.innerHTML = selectedOptions.options;
   customUpload.innerHTML = selectedOptions.customUpload;
+
+  // Handle file select if custom if selected
+  if (selectedGame === "userCustom") {
+    const fileInput = document.getElementById("fileInput");
+    if (fileInput) {
+      fileInput.addEventListener("change", handleFileSelect);
+    }
+  }
 }
 
 function changeModeRadio() {
