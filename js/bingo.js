@@ -63,6 +63,16 @@ var bingo = function (size) {
     SIZE = size;
   }
 
+  const sizeRequirements = {
+    20: 169,
+    15: 82,
+    13: 169,
+    9: 38,
+    5: 25,
+    4: 16,
+    3: 9,
+  };
+
   // Check that custom list meets size requirements
   customList = JSON.parse(sessionStorage.getItem("customList"));
   if (TYPE == "custom" && customList == null) {
@@ -70,16 +80,6 @@ var bingo = function (size) {
   }
 
   if (TYPE === "custom") {
-    const sizeRequirements = {
-      20: 169,
-      15: 82,
-      13: 169,
-      9: 38,
-      5: 25,
-      4: 16,
-      3: 9,
-    };
-
     if (customList.length < sizeRequirements[SIZE]) {
       alert(
         "Not enough goals to meet the size requirements for selected settings."
@@ -1275,7 +1275,14 @@ var bingo = function (size) {
       var bingoBoard = masterGoalList;
   }
 
-  //console.log(bingoBoard);
+  //console.log(bingoBoard.length);
+  //console.log(SIZE);
+
+  if (bingoBoard.length < sizeRequirements[SIZE]) {
+    alert(
+      "Not enough goals to meet the size requirements for selected settings."
+    );
+  }
 
   bingoBoard = shuffleArray(bingoBoard);
 
