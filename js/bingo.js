@@ -318,6 +318,18 @@ var bingo = function (size) {
     case "kh1":
       cardtype = "KH1";
       break;
+    case "kh1E":
+      cardtype = "KH1 Easy";
+      break;
+    case "kh1M":
+      cardtype = "KH1 Normal";
+      break;
+    case "kh1H":
+      cardtype = "KH1 Hard";
+      break;
+    case "kh1N":
+      cardtype = "KH1 Nightmare";
+      break;
     case "bunter":
       cardtype = "Bunter";
       break;
@@ -1226,6 +1238,18 @@ var bingo = function (size) {
     case "KH1":
       var bingoBoard = kh1goals;
       break;
+    case "KH1 Easy":
+      var bingoBoard = kh1Easy;
+      break;
+    case "KH1 Normal":
+      var bingoBoard = kh1Medium;
+      break;
+    case "KH1 Hard":
+      var bingoBoard = kh1Hard;
+      break;
+    case "KH1 Nightmare":
+      var bingoBoard = kh1Nightmare;
+      break;
     case "Bunter":
       var bingoBoard = bunterList;
       break;
@@ -1493,7 +1517,10 @@ function changeGame(selectedGame) {
     },
     kingdomhearts1: {
       options: `
-        <option value="kh1" selected="selected">Default</option>
+        <option value="kh1E">Easy</option>
+        <option value="kh1M" selected="selected">Normal</option>
+        <option value="kh1H">Hard</option>
+        <option value="kh1N">Nightmare</option>
       `,
       customUpload: "",
     },
