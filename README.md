@@ -8,15 +8,17 @@ https://cj-2123.github.io/kh2-exploration-bingo/
 
 # Instructions
 
-The page defaults to KH2 Rando Bingo Standard 5x5 Random Seed.
+![Instructions](/img/instructions.jpg "Instructions")
 
-1. Select settings using the radio buttons under "Generate New Card"
-2. Select a bingo list from the drop down menus
-3. When you select a list, a board will generate with the settings and list you selected
+1. Select a Game then select Objectives from the drop down menus
+2. Choose the settings using the radio buttons under the "Game" and "Objectives" menus.
+3. Click "Generate Board" to generate a bingo with your selected settings, game, and objectives list.
 
-- If you select "Exploration", a mini bingo board will appear below the "Generate Custom List" button. Use it to set your starting squares, signified with an S, and goal squares if wanted, signified with a G.
-- Right clicking a square will mark it with a star
+- Right clicking a square on the bingo board will mark it with a star
 - For standard bingo, click on a Row or Col or Diagonal header to popout those goals.
+- If you select "Exploration", a mini bingo board will appear below the "Generate Custom List" button. Use it to set your starting squares, signified with an S, and goal squares if wanted, signified with a G.
+
+![Exploration-Instructions](/img/exploration-instructions.jpg "Exploration")
 
 For using your own list, see the "Custom Bingo Lists" section.
 
@@ -32,6 +34,8 @@ This board supports multiple Kingdom Hearts games with a variety of board types 
 - Kingdom Hearts 3 Randomizer
 - Birth By Sleep Terra, Ventus, and Aqua
 - Kingdom Hearts 1 and 2 Combined
+
+Full bingo lists: https://cj-2123.github.io/docs/bingo.html
 
 ## Bingo Board Types
 
@@ -79,11 +83,12 @@ Roguelike
 
 ### How to use custom bingo lists:
 
-1. Click "Choose File" and select your .json bingo list
-2. Set your settings to whatever you like (seed, bingo mode, and board size)
-3. Click the "Generate Custom List" button to generate a board from your goal list
+1. Select "Custom" for Game. A file chooser will appear below
+2. Click "Choose File" and select your .json bingo list
+3. Set your settings to whatever you like (seed, bingo mode, and board size)
+4. Click the "Generate Board" button to generate a board from your goal list
 
-The list will stay uploaded to the site until you close the page or browser, or until you upload a different list.
+The list will stay uploaded to the site until you navigate away from the site, or close the browser, or until you upload a different list.
 
 ### Requirements
 
