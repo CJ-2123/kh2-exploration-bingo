@@ -345,6 +345,9 @@ var bingo = function (size) {
     case "kh3":
       cardtype = "KH3";
       break;
+    case "kh2generic":
+      cardtype = "KH2 Generic";
+      break;
     default:
       cardtype = "Normal";
   }
@@ -1265,6 +1268,9 @@ var bingo = function (size) {
     case "KH3":
       var bingoBoard = kh3goals;
       break;
+    case "KH2 Generic":
+      var bingoBoard = kh2Generic;
+      break;
     default:
       var bingoBoard = masterGoalList;
   }
@@ -1512,6 +1518,7 @@ function changeGame(selectedGame) {
     kingdomhearts2: {
       options: `
         <option value="kh2" selected="selected">Default</option>
+        <option value="kh2generic">Generic</option>
         <option value="bunter">Boss Hunter</option>
       `,
       customUpload: "",
