@@ -348,6 +348,9 @@ var bingo = function (size) {
     case "kh2generic":
       cardtype = "KH2 Generic";
       break;
+    case "bbscombo":
+      cardtype = "BBS Combo";
+      break;
     default:
       cardtype = "Normal";
   }
@@ -1271,6 +1274,9 @@ var bingo = function (size) {
     case "KH2 Generic":
       var bingoBoard = kh2Generic;
       break;
+    case "BBS Combo":
+      var bingoBoard = bbsCombo;
+      break;
     default:
       var bingoBoard = masterGoalList;
   }
@@ -1549,6 +1555,7 @@ function changeGame(selectedGame) {
     combogames: {
       options: `
         <option value="combo" selected="selected">KH 1 + 2</option>
+        <option value="bbscombo">BBS All Stories</option>
       `,
       customUpload: "",
     },
