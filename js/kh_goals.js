@@ -3399,6 +3399,7 @@ var kh2Generic = [
   { name: "Enter the Transport to Remembrance" },
   { name: "Enter GoA through the Transport to Remembrance" },
   { name: "Talk to a Final Fantasy character" },
+  { name: "Talk to King Mickey" },
   { name: "Heal a party member with Cure" },
   { name: "Use a potion, ether, elixir, and tent" },
   { name: "Use a mega-potion, mega-ether, and megalixir" },
