@@ -147,6 +147,7 @@ var bingo = function (size) {
     $("#exploration-init").hide();
     $("#bingologiccheck").hide();
     $("#bingologiccheck").prop("checked", false);
+    $("#jsonFormat").hide();
     // startSlots = [7];
     // interSlots = [98, 150, 202];
     // goalSlots = [254];
@@ -166,6 +167,7 @@ var bingo = function (size) {
     $("#exploration-init").hide();
     $("#bingologiccheck").hide();
     $("#bingologiccheck").prop("checked", false);
+    $("#jsonFormat").hide();
     startSlots = [7];
     interSlots = [98, 150, 202];
     goalSlots = [254];
@@ -182,6 +184,7 @@ var bingo = function (size) {
     $("#exploration-init").hide();
     $("#bingologiccheck").hide();
     $("#bingologiccheck").prop("checked", false);
+    $("#jsonFormat").hide();
     startSlots = [5];
     interSlots = [50, 77, 104];
     goalSlots = [131];
@@ -189,6 +192,7 @@ var bingo = function (size) {
     if (MODE == "exploration") {
       $("#exploration").prop("checked", true);
       $("#size-radio2").hide();
+      $("#jsonFormat").hide();
       if (SIZE != 13) {
         $("#exploration-init-form").hide();
       } else {
@@ -207,6 +211,7 @@ var bingo = function (size) {
       $("#bingo-roguelike-3").remove();
       $("#bingologiccheck").hide();
       $("#bingologiccheck").prop("checked", false);
+      $("#jsonFormat").hide();
       $(".container").css("width", "1800px");
       $("#size13").prop("checked", true);
       slots = range(1, 169);
