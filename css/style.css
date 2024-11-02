@@ -327,6 +327,14 @@ th {
 	background:#072;
 }
 
+#bingoPage .bingo tr td.purplesquare {
+	background:#7D0DC3;
+}
+
+#bingoPage .bingo tr td.purplesquare:hover,#bingoPage .bingo tr td.purplesquare.hover {
+	background:#A020F0;
+}
+
 #bingoPage .bingo tr td.redsquare {
 	background:#501;
 }

@@ -25,6 +25,15 @@ function handleFileSelect(event) {
   }
 }
 
+// Change state of bingo logic checkbox
+function toggleBingoLogic() {
+  if (document.getElementById("bingologic").checked) {
+    $("#bingologiccheck").prop("checked", true);
+  } else {
+    $("#bingologiccheck").prop("checked", false);
+  }
+}
+
 // function to create bingo board
 var bingo = function (size) {
   if (typeof size == "undefined") size = 5;
@@ -136,6 +145,8 @@ var bingo = function (size) {
     $("#size9").prop("checked", true);
     $("#size-radio").hide();
     $("#exploration-init").hide();
+    $("#bingologiccheck").hide();
+    $("#bingologiccheck").prop("checked", false);
     // startSlots = [7];
     // interSlots = [98, 150, 202];
     // goalSlots = [254];
@@ -153,6 +164,8 @@ var bingo = function (size) {
     $("#size20").prop("checked", true);
     $("#size-radio").hide();
     $("#exploration-init").hide();
+    $("#bingologiccheck").hide();
+    $("#bingologiccheck").prop("checked", false);
     startSlots = [7];
     interSlots = [98, 150, 202];
     goalSlots = [254];
@@ -167,6 +180,8 @@ var bingo = function (size) {
     $("#size15").prop("checked", true);
     $("#size-radio").hide();
     $("#exploration-init").hide();
+    $("#bingologiccheck").hide();
+    $("#bingologiccheck").prop("checked", false);
     startSlots = [5];
     interSlots = [50, 77, 104];
     goalSlots = [131];
@@ -190,6 +205,8 @@ var bingo = function (size) {
       $("#bingo-roguelike").remove();
       $("#bingo-roguelike-2").remove();
       $("#bingo-roguelike-3").remove();
+      $("#bingologiccheck").hide();
+      $("#bingologiccheck").prop("checked", false);
       $(".container").css("width", "1800px");
       $("#size13").prop("checked", true);
       slots = range(1, 169);
@@ -202,6 +219,8 @@ var bingo = function (size) {
       $("#bingo-roguelike").remove();
       $("#bingo-roguelike-2").remove();
       $("#bingo-roguelike-3").remove();
+      $("#bingologiccheck").hide();
+      $("#bingologiccheck").prop("checked", false);
       $("#size3").prop("checked", true);
       slots = [1, 2, 3, 6, 7, 8, 11, 12, 13];
       defaultStartSlots = [1, 13];
@@ -212,6 +231,8 @@ var bingo = function (size) {
       $("#bingo-roguelike").remove();
       $("#bingo-roguelike-2").remove();
       $("#bingo-roguelike-3").remove();
+      $("#bingologiccheck").hide();
+      $("#bingologiccheck").prop("checked", false);
       $("#size4").prop("checked", true);
       slots = [1, 2, 3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 16, 17, 18, 19];
       defaultStartSlots = [7, 13];
@@ -222,6 +243,7 @@ var bingo = function (size) {
       $("#bingo-roguelike").remove();
       $("#bingo-roguelike-2").remove();
       $("#bingo-roguelike-3").remove();
+      $("#bingologiccheck").prop("checked", false);
       $("#size5").prop("checked", true);
       slots = range(1, 25);
       defaultStartSlots = [7, 19];
@@ -449,6 +471,68 @@ var bingo = function (size) {
     });
   }
 
+  // Function to check for bingo in rows, columns, and diagonals
+  function checkForBingo() {
+    const boardSize = SIZE;
+    let bingo = false;
+
+    // Check rows for bingo
+    for (let row = 0; row < boardSize + 1; row++) {
+      if (checkLine($(`.bingo .row${row}`))) {
+        bingo = true;
+      }
+    }
+
+    // Check columns for bingo
+    for (let col = 0; col < boardSize + 1; col++) {
+      if (checkLine($(`.bingo .col${col}`))) {
+        bingo = true;
+      }
+    }
+
+    // Check diagonals for bingo
+    if (checkLine($(`.bingo .tlbr`)) || checkLine($(`.bingo .bltr`))) {
+      bingo = true;
+    }
+  }
+
+  // Function to check if line is a bingo
+  function checkLine(cells) {
+    if (cells.length === 0) return false;
+
+    let greenCount = 0;
+    let redCount = 0;
+    let purpleCount = 0;
+
+    cells.each(function () {
+      if ($(this).hasClass("greensquare")) {
+        greenCount++;
+      } else if ($(this).hasClass("redsquare")) {
+        redCount++;
+      } else if ($(this).hasClass("purplesquare")) {
+        purpleCount++;
+      }
+    });
+
+    const allGreenOrPurple =
+      greenCount + purpleCount === cells.length && greenCount > 0;
+    const allRedOrPurple =
+      redCount + purpleCount === cells.length && redCount > 0;
+
+    // Turn all squares purple or turn squares green if bingo is broken
+    if (allGreenOrPurple || allRedOrPurple) {
+      cells.removeClass("greensquare redsquare").addClass("purplesquare");
+      return true;
+    } else {
+      if (purpleCount === cells.length - 1) {
+        console.log("true");
+        cells.removeClass("purplesquare redsquare").addClass("greensquare");
+      }
+    }
+
+    return false;
+  }
+
   // Cycle square colors on click
   $("#selected td").toggle(
     function () {
@@ -481,6 +565,8 @@ var bingo = function (size) {
         $(this).addClass("redsquare").removeClass("greensquare");
       } else if ($(this).hasClass("redsquare")) {
         $(this).removeClass("redsquare");
+      } else if ($(this).hasClass("purplesquare")) {
+        $(this).removeClass("purplesquare");
       } else {
         if ($(this).hasClass("bluesquare")) {
           $(this).removeClass("bluesquare");
@@ -504,6 +590,9 @@ var bingo = function (size) {
         // top down doesn't matter
         $("#slot" + (slot + 5)).removeClass("hidden");
         $("#slot" + (slot - 5)).removeClass("hidden");
+      }
+      if ($("#bingologiccheck").prop("checked")) {
+        checkForBingo();
       }
     }
   );
