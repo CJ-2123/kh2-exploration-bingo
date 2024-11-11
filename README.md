@@ -77,9 +77,12 @@ Full bingo lists: https://cj-2123.github.io/docs/bingo.html
 
 ![Bingo Board](/img/popout.jpg "Popout Window")
 
-- Bingo Logic (Work in Progress) to change lines to purple when getting a bingo
+### Work in Progress
 
 ![Bingo Board](/img/bingo-logic-check.jpg "Bingo Logic Check")
+
+- Bingo logic to change lines to purple when getting a bingo
+
 ![Bingo Board](/img/bingo-logic.jpg "Bingo Logic")
 
 ## Custom Bingo Lists
