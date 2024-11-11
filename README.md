@@ -39,12 +39,12 @@ Full bingo lists: https://cj-2123.github.io/docs/bingo.html
 
 ## Bingo Board Types
 
-Standard
+**Standard**
 
 - Traditional bingo format that generates a board of random goals.
 - Board sizes: 5x5, 4x4, 3x3, 13x13
 
-Exploration
+**Exploration**
 
 - Generates a board with hidden squares and predetermined visible squares.
 - Clicking a goal will reveal the squares to the left, right, top, and bottom of it.
@@ -54,7 +54,7 @@ Exploration
 
 ![Bingo Board](/img/exploration.jpg "Exploration Bingo")
 
-Roguelike
+**Roguelike**
 
 - Generates a multi-layered board with a start square at the top and a goal square at the bottom
   - 9 layered board if playing KH2 Boss Hunter.
@@ -77,6 +77,11 @@ Roguelike
 
 ![Bingo Board](/img/popout.jpg "Popout Window")
 
+- Bingo Logic (Work in Progress) to change lines to purple when getting a bingo
+
+![Bingo Board](/img/bingo-logic-check.jpg "Bingo Logic Check")
+![Bingo Board](/img/bingo-logic.jpg "Bingo Logic")
+
 ## Custom Bingo Lists
 
 ![Bingo Board](/img/custom.jpg "Custom Bingo Lists")
@@ -92,7 +97,7 @@ The list will stay uploaded to the site until you navigate away from the site, o
 
 ### Requirements
 
-Bingo File:
+**Bingo File:**
 
 - The .json bingo file must be formatted as follows:
 
@@ -106,7 +111,7 @@ Bingo File:
 ]
 ```
 
-Size Requirements:
+**Size Requirements:**
 
 - 3x3 needs at least 9 goals
 - 4x4 needs at least 16 goals
