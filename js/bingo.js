@@ -1587,16 +1587,18 @@ function reseedPage(type) {
     qLang = "&lang=" + params.get("lang");
   }
 
-  window.location =
+  window.open(
     "bingo.html" +
-    qSeed +
-    qCustom +
-    qType +
-    qMode +
-    qSize +
-    qStart +
-    qGoal +
-    qLang;
+      qSeed +
+      qCustom +
+      qType +
+      qMode +
+      qSize +
+      qStart +
+      qGoal +
+      qLang,
+    "_blank"
+  );
 
   return false;
 }
