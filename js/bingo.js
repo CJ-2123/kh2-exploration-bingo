@@ -139,6 +139,7 @@ var bingo = function (size) {
   // Set appearance and assign special slots for each board mode
   if (
     (MODE == "roguelike" && TYPE == "bunter") ||
+    (MODE == "roguelike" && TYPE == "bunterImage") ||
     (MODE == "roguelike" && SIZE == 7)
   ) {
     $("#bingo-standard").remove();
@@ -1559,7 +1560,8 @@ function reseedPage(type) {
   var qLang = "";
 
   if ($("#random-seed").is(":checked")) {
-    qSeed = "?seed=" + Math.ceil(MAX_SEED * Math.random());
+    qSeed =
+      "?seed=" + Math.floor((Date.now() + Math.random() * 1000000) % MAX_SEED);
   } else {
     var s = $("#seed").val();
     qSeed =
