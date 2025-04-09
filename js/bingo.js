@@ -114,6 +114,12 @@ var bingo = function (size) {
     alert("Cannot play bunter with 20 layer roguelike");
   }
 
+  // check if images are being used for goals
+  var imageGoals;
+  if (TYPE == "bunterImage") {
+    imageGoals = true;
+  }
+
   var START = gup("start");
   var GOAL = gup("goal");
   var LANG = gup("lang");
@@ -353,6 +359,9 @@ var bingo = function (size) {
       break;
     case "bunter":
       cardtype = "Bunter";
+      break;
+    case "bunterImage":
+      cardtype = "Bunter Image";
       break;
     case "combo":
       cardtype = "Combo";
@@ -1347,6 +1356,9 @@ var bingo = function (size) {
     case "Bunter":
       var bingoBoard = bunterList;
       break;
+    case "Bunter Image":
+      var bingoBoard = bunterImageList;
+      break;
     case "Combo":
       var bingoBoard = comboList;
       break;
@@ -1393,8 +1405,24 @@ var bingo = function (size) {
       if (startSlots.includes(i)) {
         $("#slot" + i).append("START");
       } else if (!$("#slot" + i).hasClass("v-hidden")) {
-        $("#slot" + i).append(bingoBoard[j - 1].name);
-        j++;
+        // check if images are being used for goals
+        if (imageGoals) {
+          var imgSrc = bingoBoard[j - 1].image;
+          $("#slot" + i).append(
+            '<div class="tooltip"><img src="' +
+              imgSrc +
+              '" alt="' +
+              bingoBoard[j - 1].name +
+              '" class="bingo-image"><span class="tooltiptext">' +
+              bingoBoard[j - 1].name +
+              "</span></div>"
+          );
+          j++;
+        } else {
+          // else use text
+          $("#slot" + i).append(bingoBoard[j - 1].name);
+          j++;
+        }
         // if (EXPLORATION == "1" && !startSlots.includes(i)) {
         if (!startSlots.includes(i)) {
           $("#slot" + i).addClass("hidden");
@@ -1441,7 +1469,22 @@ var bingo = function (size) {
     //populate the actual table on the page
     var j = SIZE == 13 ? 169 : 25;
     for (i = 1; i <= j; i++) {
-      $("#slot" + i).append(bingoBoard[i - 1].name);
+      // check if images are being used for goals
+      if (imageGoals) {
+        var imgSrc = bingoBoard[i - 1].image;
+        $("#slot" + i).append(
+          '<div class="tooltip"><img src="' +
+            imgSrc +
+            '" alt="' +
+            bingoBoard[i - 1].name +
+            '" class="bingo-image"><span class="tooltiptext">' +
+            bingoBoard[i - 1].name +
+            "</span></div>"
+        );
+      } else {
+        // else use text
+        $("#slot" + i).append(bingoBoard[i - 1].name);
+      }
       if (MODE == "exploration" && !startSlots.includes(i)) {
         $("#slot" + i).addClass("hidden");
       }
@@ -1622,6 +1665,7 @@ function changeGame(selectedGame) {
         <option value="kh2" selected="selected">Default</option>
         <option value="kh2generic">Generic</option>
         <option value="bunter">Boss Hunter</option>
+        <option value="bunterImage">Boss Hunter (Images)</option>
       `,
       customUpload: "",
     },

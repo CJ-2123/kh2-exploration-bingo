@@ -793,6 +793,229 @@ var bunterList = [
   //{ name: "Zexion (Data)" },
 ];
 
+var bunterImageList = [
+  {
+    name: "Armor Xemnas 1",
+    image: "img/bunter/ArmorXemnas1.png",
+  },
+  {
+    name: "Armor Xemnas 2",
+    image: "img/bunter/ArmorXemnas2.png",
+  },
+  {
+    name: "Axel 1",
+    image: "img/bunter/Org_AxelStruggle.png",
+  },
+  {
+    name: "Axel 2",
+    image: "img/bunter/Org_AxelData.png",
+  },
+  {
+    name: "Barbossa",
+    image: "img/bunter/Barbossa.png",
+  },
+  {
+    name: "Blizzard Lord",
+    image: "img/bunter/BlizzardLord.png",
+  },
+  {
+    name: "The Beast",
+    image: "img/bunter/Beast.png",
+  },
+  {
+    name: "Cerberus",
+    image: "img/bunter/Cerberus.png",
+  },
+  {
+    name: "Cloud",
+    image: "img/bunter/Cloud.png",
+  },
+  {
+    name: "Dark Thorn",
+    image: "img/bunter/DarkThorn.png",
+  },
+  {
+    name: "Demyx",
+    image: "img/bunter/Org_Demyx.png",
+  },
+  {
+    name: "The Experiment",
+    image: "img/bunter/Experiment.png",
+  },
+  {
+    name: "Final Xemnas",
+    image: "img/bunter/Org_FinalXemnas.png",
+  },
+  {
+    name: "Grim Reaper 1",
+    image: "img/bunter/GrimReaper1.png",
+  },
+  {
+    name: "Grim Reaper 2",
+    image: "img/bunter/GrimReaper2.png",
+  },
+  {
+    name: "Groundshaker",
+    image: "img/bunter/Groundshaker.png",
+  },
+  {
+    name: "Hades",
+    image: "img/bunter/Hades.png",
+  },
+  {
+    name: "Hayner",
+    image: "img/bunter/Hayner.png",
+  },
+  {
+    name: "Hercules",
+    image: "img/bunter/Hercules.png",
+  },
+  {
+    name: "Hostile Program",
+    image: "img/bunter/HostileProgram.png",
+  },
+  {
+    name: "Hydra",
+    image: "img/bunter/Hydra.png",
+  },
+  {
+    name: "Jafar",
+    image: "img/bunter/Jafar.png",
+  },
+  {
+    name: "Leon",
+    image: "img/bunter/Leon.png",
+  },
+  {
+    name: "Luxord",
+    image: "img/bunter/Org_Luxord.png",
+  },
+  {
+    name: "MCP",
+    image: "img/bunter/MCP.png",
+  },
+  {
+    name: "Past Pete",
+    image: "img/bunter/PastPete.png",
+  },
+  {
+    name: "Oogie Boogie",
+    image: "img/bunter/OogieBoogie.png",
+  },
+  {
+    name: "Pete TR",
+    image: "img/bunter/PeteOC.png",
+  },
+  {
+    name: "Prison Keeper",
+    image: "img/bunter/PrisonKeeper.png",
+  },
+  {
+    name: "Riku",
+    image: "img/bunter/Riku.png",
+  },
+  {
+    name: "Roxas",
+    image: "img/bunter/Org_Roxas.png",
+  },
+  {
+    name: "Saix",
+    image: "img/bunter/Org_Saix.png",
+  },
+  {
+    name: "Sark",
+    image: "img/bunter/Sark.png",
+  },
+  {
+    name: "Scar",
+    image: "img/bunter/Scar.png",
+  },
+  {
+    name: "Seifer",
+    image: "img/bunter/Seifer.png",
+  },
+  {
+    name: "Setzer",
+    image: "img/bunter/Setzer.png",
+  },
+  {
+    name: "Shadow Stalker",
+    image: "img/bunter/ShadowStalker.png",
+  },
+  {
+    name: "Shan Yu",
+    image: "img/bunter/ShanYu.png",
+  },
+  {
+    name: "Storm Rider",
+    image: "img/bunter/StormRider.png",
+  },
+  {
+    name: "Thresholder",
+    image: "img/bunter/Thresholder.png",
+  },
+  {
+    name: "Tifa",
+    image: "img/bunter/Tifa.png",
+  },
+  {
+    name: "Twilight Thorn",
+    image: "img/bunter/TwilightThorn.png",
+  },
+  {
+    name: "Vivi",
+    image: "img/bunter/Vivi.png",
+  },
+  {
+    name: "Volcano Lord",
+    image: "img/bunter/VolcanoLord.png",
+  },
+  {
+    name: "Xaldin",
+    image: "img/bunter/Org_Xaldin.png",
+  },
+  {
+    name: "Xemnas",
+    image: "img/bunter/Org_Xemnas.png",
+  },
+  {
+    name: "Xigbar",
+    image: "img/bunter/Org_Xigbar.png",
+  },
+  {
+    name: "Yuffie",
+    image: "img/bunter/Yuffie.png",
+  },
+  {
+    name: "Larxene",
+    image: "img/bunter/Org_Larxene.png",
+  },
+  {
+    name: "Lexaeus",
+    image: "img/bunter/Org_Lexaeus.png",
+  },
+  {
+    name: "Marluxia",
+    image: "img/bunter/Org_Marluxia.png",
+  },
+  {
+    name: "Sephiroth",
+    image: "img/bunter/Super_Sephiroth.png",
+  },
+  {
+    name: "Terra",
+    image: "img/bunter/Super_Terra.png",
+  },
+  {
+    name: "Vexen",
+    image: "img/bunter/Org_Vexen.png",
+  },
+  {
+    name: "Zexion",
+    image: "img/bunter/Org_Zexion.png",
+  },
+];
+
 var kh1goals = [
   { name: "Acquire All 5 Trinities" },
   { name: "Activate All Blue Trinities" },
