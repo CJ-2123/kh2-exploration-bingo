@@ -1,3 +1,16 @@
+/*
+Steps for adding a new goal list
+
+1. create goal list in kh_goals.js
+2. in bingo.js, create option in function changeGame()
+3. in bingo function switch (TYPE), add card type
+4. in switch (cardtype), set list
+
+if using images
+- images should be 200x200
+- add type condition to set imageGoals = true (bunterImages example)
+*/
+
 var masterGoalList = [
   { name: "7 keyblades" },
   { name: "7 unique staffs" },
