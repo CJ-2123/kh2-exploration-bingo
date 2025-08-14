@@ -1439,8 +1439,25 @@ var bingo = function (size) {
       if (startSlots.includes(i)) {
         $("#slot" + i).append("START");
       } else if (!$("#slot" + i).hasClass("v-hidden")) {
-        $("#slot" + i).append(bingoBoard[j - 1].name);
-        j++;
+        // $("#slot" + i).append(bingoBoard[j - 1].name);
+        // j++;
+        if (imageGoals) {
+          var imgSrc = bingoBoard[j - 1].image;
+          $("#slot" + i).append(
+            '<div class="tooltip"><img src="' +
+              imgSrc +
+              '" alt="' +
+              bingoBoard[j - 1].name +
+              '" class="bingo-image"><span class="tooltiptext">' +
+              bingoBoard[j - 1].name +
+              "</span></div>"
+          );
+          j++;
+        } else {
+          // else use text
+          $("#slot" + i).append(bingoBoard[j - 1].name);
+          j++;
+        }
         // if (EXPLORATION == "1" && !startSlots.includes(i)) {
         if (!startSlots.includes(i)) {
           $("#slot" + i).addClass("hidden");
@@ -1456,8 +1473,25 @@ var bingo = function (size) {
       if (startSlots.includes(i)) {
         $("#slot" + i).append("START");
       } else if (!$("#slot" + i).hasClass("v-hidden")) {
-        $("#slot" + i).append(bingoBoard[j - 1].name);
-        j++;
+        // $("#slot" + i).append(bingoBoard[j - 1].name);
+        // j++;
+        if (imageGoals) {
+          var imgSrc = bingoBoard[j - 1].image;
+          $("#slot" + i).append(
+            '<div class="tooltip"><img src="' +
+              imgSrc +
+              '" alt="' +
+              bingoBoard[j - 1].name +
+              '" class="bingo-image"><span class="tooltiptext">' +
+              bingoBoard[j - 1].name +
+              "</span></div>"
+          );
+          j++;
+        } else {
+          // else use text
+          $("#slot" + i).append(bingoBoard[j - 1].name);
+          j++;
+        }
         // if (EXPLORATION == "1" && !startSlots.includes(i)) {
         if (!startSlots.includes(i)) {
           $("#slot" + i).addClass("hidden");
