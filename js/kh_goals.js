@@ -2049,6 +2049,529 @@ var kh1Nightmare = [
   { name: "Activate the White Trinity in Atlantica" },
 ];
 
+var kh1ImageList = [
+  {
+    name: "Leon",
+    image: "img/kh1/Leon.png",
+  },
+  {
+    name: "Guard Armor",
+    image: "img/kh1/GuardArmor.png",
+  },
+  {
+    name: "Opposite Armor",
+    image: "img/kh1/OppositeArmor.png",
+  },
+  {
+    name: "Trickmaster",
+    image: "img/kh1/Trickmaster.png",
+  },
+  {
+    name: "Cloud",
+    image: "img/kh1/Cloud.png",
+  },
+  {
+    name: "Cerberus",
+    image: "img/kh1/Cerberus.png",
+  },
+  {
+    name: "Sabor",
+    image: "img/kh1/Sabor.png",
+  },
+  {
+    name: "Stealth Sneak",
+    image: "img/kh1/StealthSneak.png",
+  },
+  {
+    name: "Pot Centipede",
+    image: "img/kh1/PotCentipede.png",
+  },
+  {
+    name: "Cave of Wonders Guardian",
+    image: "img/kh1/TigerHead.png",
+  },
+  {
+    name: "Jafar",
+    image: "img/kh1/Jafar.png",
+  },
+  {
+    name: "Parasite Cage 1",
+    image: "img/kh1/ParasiteCage1.png",
+  },
+  {
+    name: "Parasite Cage 2",
+    image: "img/kh1/ParasiteCage2.png",
+  },
+  {
+    name: "Lock, Shock, and Barrel",
+    image: "img/kh1/LSB.png",
+  },
+  {
+    name: "Oogie",
+    image: "img/kh1/Oogie.png",
+  },
+  {
+    name: "Shark",
+    image: "img/kh1/Shark.png",
+  },
+  {
+    name: "Ursula",
+    image: "img/kh1/Ursula.png",
+  },
+  {
+    name: "Giant Ursula",
+    image: "img/kh1/BigUrsula.png",
+  },
+  {
+    name: "Anti-Sora",
+    image: "img/kh1/AntiSora.png",
+  },
+  {
+    name: "Captain Hook",
+    image: "img/kh1/CaptainHook.png",
+  },
+  {
+    name: "Riku 1",
+    image: "img/kh1/Riku1.png",
+  },
+  {
+    name: "Maleficent",
+    image: "img/kh1/Maleficent.png",
+  },
+  {
+    name: "Dragon Maleficent",
+    image: "img/kh1/DragonMal.png",
+  },
+  {
+    name: "Riku 2",
+    image: "img/kh1/Riku2.png",
+  },
+  {
+    name: "Behemoth",
+    image: "img/kh1/Behemoth.png",
+  },
+  {
+    name: "Chernabog",
+    image: "img/kh1/Chernabog.png",
+  },
+  {
+    name: "Fire",
+    image: "img/kh1/MagicFire1.png",
+  },
+  {
+    name: "Fira",
+    image: "img/kh1/MagicFire2.png",
+  },
+  {
+    name: "Firaga",
+    image: "img/kh1/MagicFire3.png",
+  },
+  {
+    name: "Blizzard",
+    image: "img/kh1/MagicBlizzard1.png",
+  },
+  {
+    name: "Blizzara",
+    image: "img/kh1/MagicBlizzard2.png",
+  },
+  {
+    name: "Blizzaga",
+    image: "img/kh1/MagicBlizzard3.png",
+  },
+  {
+    name: "Thunder",
+    image: "img/kh1/MagicThunder1.png",
+  },
+  {
+    name: "Thundara",
+    image: "img/kh1/MagicThunder2.png",
+  },
+  {
+    name: "Thundaga",
+    image: "img/kh1/MagicThunder3.png",
+  },
+  {
+    name: "Cure",
+    image: "img/kh1/MagicCure1.png",
+  },
+  {
+    name: "Cura",
+    image: "img/kh1/MagicCure2.png",
+  },
+  {
+    name: "Curaga",
+    image: "img/kh1/MagicCure3.png",
+  },
+  {
+    name: "Stop",
+    image: "img/kh1/MagicStop1.png",
+  },
+  {
+    name: "Stopra",
+    image: "img/kh1/MagicStop2.png",
+  },
+  {
+    name: "Stopga",
+    image: "img/kh1/MagicStop3.png",
+  },
+  {
+    name: "Gravity",
+    image: "img/kh1/MagicGravity1.png",
+  },
+  {
+    name: "Gravira",
+    image: "img/kh1/MagicGravity2.png",
+  },
+  {
+    name: "Graviga",
+    image: "img/kh1/MagicGravity3.png",
+  },
+  {
+    name: "Aero",
+    image: "img/kh1/MagicAero1.png",
+  },
+  {
+    name: "Aerora",
+    image: "img/kh1/MagicAero2.png",
+  },
+  {
+    name: "Aeroga",
+    image: "img/kh1/MagicAero3.png",
+  },
+  {
+    name: "Bambi",
+    image: "img/kh1/Bambi.png",
+  },
+  {
+    name: "Dumbo",
+    image: "img/kh1/Dumbo.png",
+  },
+  {
+    name: "Genie",
+    image: "img/kh1/Genie.png",
+  },
+  {
+    name: "Mushu",
+    image: "img/kh1/Mushu.png",
+  },
+  {
+    name: "Simba",
+    image: "img/kh1/Simba.png",
+  },
+  {
+    name: "Tinker Bell",
+    image: "img/kh1/TinkerBell.png",
+  },
+  {
+    name: "1 Torn Page",
+    image: "img/kh1/TornPages1.png",
+  },
+  {
+    name: "2 Torn Pages",
+    image: "img/kh1/TornPages2.png",
+  },
+  {
+    name: "3 Torn Pages",
+    image: "img/kh1/TornPages3.png",
+  },
+  {
+    name: "4 Torn Pages",
+    image: "img/kh1/TornPages4.png",
+  },
+  {
+    name: "5 Torn Pages",
+    image: "img/kh1/TornPages5.png",
+  },
+  {
+    name: "Blue Trinity",
+    image: "img/kh1/BlueTrinity.png",
+  },
+  {
+    name: "Green Trinity",
+    image: "img/kh1/GreenTrinity.png",
+  },
+  {
+    name: "Red Trinity",
+    image: "img/kh1/RedTrinity.png",
+  },
+  {
+    name: "White Trinity",
+    image: "img/kh1/WhiteTrinity.png",
+  },
+  {
+    name: "Yellow Trinity",
+    image: "img/kh1/YellowTrinity.png",
+  },
+  {
+    name: "Agrabah Item",
+    image: "img/kh1/Agrabah.png",
+  },
+  {
+    name: "Atlantica Item",
+    image: "img/kh1/Atlantica.png",
+  },
+  {
+    name: "Hollow Bastion Item",
+    image: "img/kh1/HollowBastion.png",
+  },
+  {
+    name: "Olympus Coliseum Item",
+    image: "img/kh1/Olympus.png",
+  },
+  {
+    name: "End of the World Item",
+    image: "img/kh1/EOTW.png",
+  },
+  {
+    name: "Halloween Town Item",
+    image: "img/kh1/HalloweenTown.png",
+  },
+  {
+    name: "Destiny Islands Item",
+    image: "img/kh1/DestinyIslands.png",
+  },
+  {
+    name: "Deep Jungle Item",
+    image: "img/kh1/DeepJungle.png",
+  },
+  {
+    name: "Monstro Item",
+    image: "img/kh1/Monstro.png",
+  },
+  {
+    name: "Neverland Item",
+    image: "img/kh1/Neverland.png",
+  },
+  {
+    name: "Wonderland Item",
+    image: "img/kh1/Wonderland.png",
+  },
+  {
+    name: "Theon Vol. 6",
+    image: "img/kh1/Theon.png",
+  },
+  {
+    name: "Evidence",
+    image: "img/kh1/Evidence.png",
+  },
+  {
+    name: "Jack in the Box",
+    image: "img/kh1/JackintheBox.png",
+  },
+  {
+    name: "Slides",
+    image: "img/kh1/Slides.png",
+  },
+  {
+    name: "Crystal Trident",
+    image: "img/kh1/CrystalTrident.png",
+  },
+  {
+    name: "Forget-Me-Not",
+    image: "img/kh1/Forget.png",
+  },
+  {
+    name: "Entry Pass",
+    image: "img/kh1/EntryPass.png",
+  },
+  {
+    name: "Second Chance",
+    image: "img/kh1/SecondChance.png",
+  },
+  {
+    name: "Combo Master",
+    image: "img/kh1/ComboMaster.png",
+  },
+  {
+    name: "Glide",
+    image: "img/kh1/Glide.png",
+  },
+  {
+    name: "High Jump",
+    image: "img/kh1/HighJump.png",
+  },
+  {
+    name: "Mermaid Kick",
+    image: "img/kh1/MermaidKick.png",
+  },
+  {
+    name: "Dodge Roll",
+    image: "img/kh1/DodgeRoll.png",
+  },
+  {
+    name: "Flame Emblem Piece",
+    image: "img/kh1/EmblemBlue.png",
+  },
+  {
+    name: "Statue Emblem Piece",
+    image: "img/kh1/EmblemGreen.png",
+  },
+  {
+    name: "Chest Emblem Piece",
+    image: "img/kh1/EmblemPink.png",
+  },
+  {
+    name: "Fountain Emblem Piece",
+    image: "img/kh1/EmblemRed.png",
+  },
+  {
+    name: "Lionheart",
+    image: "img/kh1/Lionheart.png",
+  },
+  {
+    name: "Spellbinder",
+    image: "img/kh1/Spellbinder.png",
+  },
+  {
+    name: "Oathkeeper",
+    image: "img/kh1/Oathkeeper.png",
+  },
+  {
+    name: "Lady Luck",
+    image: "img/kh1/LadyLuck.png",
+  },
+  {
+    name: "Olympia",
+    image: "img/kh1/Olympia.png",
+  },
+  {
+    name: "Jungle King",
+    image: "img/kh1/JungleKing.png",
+  },
+  {
+    name: "Three Wishes",
+    image: "img/kh1/ThreeWishes.png",
+  },
+  {
+    name: "Wishing Star",
+    image: "img/kh1/WishingStar.png",
+  },
+  {
+    name: "Pumpkinhead",
+    image: "img/kh1/Pumpkinhead.png",
+  },
+  {
+    name: "Crabclaw",
+    image: "img/kh1/Crabclaw.png",
+  },
+  {
+    name: "Fairy Harp",
+    image: "img/kh1/FairyHarp.png",
+  },
+  {
+    name: "Divine Rose",
+    image: "img/kh1/DivineRose.png",
+  },
+  {
+    name: "Oblivion",
+    image: "img/kh1/Oblivion.png",
+  },
+  {
+    name: "1 Postcard",
+    image: "img/kh1/Postcards1.png",
+  },
+  {
+    name: "2 Postcards",
+    image: "img/kh1/Postcards2.png",
+  },
+  {
+    name: "3 Postcards",
+    image: "img/kh1/Postcards3.png",
+  },
+  {
+    name: "4 Postcards",
+    image: "img/kh1/Postcards4.png",
+  },
+  {
+    name: "5 Postcards",
+    image: "img/kh1/Postcards5.png",
+  },
+  {
+    name: "6 Postcards",
+    image: "img/kh1/Postcards6.png",
+  },
+  {
+    name: "7 Postcards",
+    image: "img/kh1/Postcards7.png",
+  },
+  {
+    name: "8 Postcards",
+    image: "img/kh1/Postcards8.png",
+  },
+  {
+    name: "9 Postcards",
+    image: "img/kh1/Postcards9.png",
+  },
+  {
+    name: "10 Postcards",
+    image: "img/kh1/Postcards10.png",
+  },
+  {
+    name: "10 Puppies",
+    image: "img/kh1/Puppies10.png",
+  },
+  {
+    name: "20 Puppies",
+    image: "img/kh1/Puppies20.png",
+  },
+  {
+    name: "30 Puppies",
+    image: "img/kh1/Puppies30.png",
+  },
+  {
+    name: "40 Puppies",
+    image: "img/kh1/Puppies40.png",
+  },
+  {
+    name: "50 Puppies",
+    image: "img/kh1/Puppies50.png",
+  },
+  {
+    name: "60 Puppies",
+    image: "img/kh1/Puppies60.png",
+  },
+  {
+    name: "70 Puppies",
+    image: "img/kh1/Puppies70.png",
+  },
+  {
+    name: "80 Puppies",
+    image: "img/kh1/Puppies80.png",
+  },
+  {
+    name: "90 Puppies",
+    image: "img/kh1/Puppies90.png",
+  },
+  {
+    name: "99 Puppies",
+    image: "img/kh1/Puppies99.png",
+  },
+  {
+    name: "Hades Cup 10th Seed",
+    image: "img/kh1/HadesCup10.png",
+  },
+  {
+    name: "Hades Cup 20th Seed",
+    image: "img/kh1/HadesCup20.png",
+  },
+  {
+    name: "Hades Cup 30th Seed",
+    image: "img/kh1/HadesCup30.png",
+  },
+  {
+    name: "Hades Cup 40th Seed",
+    image: "img/kh1/HadesCup40.png",
+  },
+  {
+    name: "Hades Cup 44th Seed",
+    image: "img/kh1/HadesCup44.png",
+  },
+  {
+    name: "Hercules",
+    image: "img/kh1/Hercules.png",
+  },
+];
+
 var comboList = [
   { name: "KH2: 7 keyblades" },
   { name: "KH2: 7 unique staffs" },

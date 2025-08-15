@@ -116,7 +116,7 @@ var bingo = function (size) {
 
   // check if images are being used for goals
   var imageGoals;
-  if (TYPE == "bunterImage") {
+  if (TYPE == "bunterImage" || TYPE == "kh1Image") {
     imageGoals = true;
   }
 
@@ -357,6 +357,9 @@ var bingo = function (size) {
       break;
     case "kh1N":
       cardtype = "KH1 Nightmare";
+      break;
+    case "kh1Image":
+      cardtype = "KH1 Image";
       break;
     case "bunter":
       cardtype = "Bunter";
@@ -1354,6 +1357,9 @@ var bingo = function (size) {
     case "KH1 Nightmare":
       var bingoBoard = kh1Nightmare;
       break;
+    case "KH1 Image":
+      var bingoBoard = kh1ImageList;
+      break;
     case "Bunter":
       var bingoBoard = bunterList;
       break;
@@ -1711,6 +1717,7 @@ function changeGame(selectedGame) {
         <option value="kh1M" selected="selected">Normal</option>
         <option value="kh1H">Hard</option>
         <option value="kh1N">Nightmare</option>
+        <option value="kh1Image">AP Randomizer (Images)</option>
       `,
       customUpload: "",
     },
