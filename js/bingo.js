@@ -1538,23 +1538,29 @@ var bingo = function (size) {
   console.log(SIZE);
   switch (SIZE) {
     case 5:
-      var bingosync_goals = JSON.stringify(bingoBoard.slice(0, 25));
+      var bingosync_goals = JSON.stringify(
+        bingoBoard.slice(0, 25).map((item) => ({ name: item.name }))
+      );
       break;
     case 4:
-      bingoBoard.splice(4, 1);
-      bingoBoard.splice(8, 1);
-      bingoBoard.splice(12, 1);
-      bingoBoard.splice(16, 1);
-      var bingosync_goals = JSON.stringify(bingoBoard.slice(0, 16));
+      // bingoBoard.splice(4, 1);
+      // bingoBoard.splice(8, 1);
+      // bingoBoard.splice(12, 1);
+      // bingoBoard.splice(16, 1);
+      // var bingosync_goals = JSON.stringify(bingoBoard.slice(0, 16));
+      $("#jsonFormat").hide();
       break;
     case 3:
-      bingoBoard.splice(3, 2);
-      bingoBoard.splice(6, 2);
-      bingoBoard.splice(9, 2);
-      var bingosync_goals = JSON.stringify(bingoBoard.slice(0, 9));
+      // bingoBoard.splice(3, 2);
+      // bingoBoard.splice(6, 2);
+      // bingoBoard.splice(9, 2);
+      // var bingosync_goals = JSON.stringify(bingoBoard.slice(0, 9));
+      $("#jsonFormat").hide();
       break;
     default:
-      var bingosync_goals = JSON.stringify(bingoBoard.slice(0, 25));
+      var bingosync_goals = JSON.stringify(
+        bingoBoard.slice(0, 25).map((item) => ({ name: item.name }))
+      );
   }
 
   //var bingosync_goals = JSON.stringify(bingoBoard.slice(0,25));
