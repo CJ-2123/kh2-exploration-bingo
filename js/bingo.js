@@ -1713,7 +1713,7 @@ function changeGame(selectedGame) {
         <option value="kh2" selected="selected">Default</option>
         <option value="kh2generic">Generic</option>
         <option value="bunter">Boss Hunter</option>
-        <option value="bunterImage">Boss Hunter (Images)</option>
+        <option value="bunterImage">Boss Hunter (Icons)</option>
       `,
       customUpload: "",
     },
@@ -1723,7 +1723,7 @@ function changeGame(selectedGame) {
         <option value="kh1M" selected="selected">Normal</option>
         <option value="kh1H">Hard</option>
         <option value="kh1N">Nightmare</option>
-        <option value="kh1Image">AP Randomizer (Images)</option>
+        <option value="kh1Image">AP Randomizer (Icons)</option>
       `,
       customUpload: "",
     },
