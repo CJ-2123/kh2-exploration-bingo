@@ -16,7 +16,7 @@ https://cj-2123.github.io/kh2-exploration-bingo/
 
 - Right clicking a square on the bingo board will mark it with a star
 - For standard bingo, click on a Row or Col or Diagonal header to popout those goals.
-- If you select "Exploration", a mini bingo board will appear below the "Generate Custom List" button. Use it to set your starting squares, signified with an S, and goal squares if wanted, signified with a G.
+- If you select "Exploration", a mini bingo board will appear. Use it to set your starting squares, signified with an S, and goal squares if wanted, signified with a G.
 
 ![Exploration-Instructions](/img/exploration-instructions.jpg "Exploration")
 
@@ -114,6 +114,124 @@ The list will stay uploaded to the site until you navigate away from the site, o
 ]
 ```
 
+<details>
+<summary>Sample Custom Json File</summary>
+<br>
+<pre>
+[
+	{"name": "Kill a Flux Construct"},
+	{"name": "Complete 2 Backpack Koroks"},
+	{"name": "Open 10 Chests"},
+	{"name": "Obtain all Archaic Armor"},
+	{"name": "Open 3 Zonai Outpost Chests"},
+	{"name": "Learn 10 Recipes"},
+	{"name": "Kill 6 Captain Constructs"},
+	{"name": "Die to a Test of Vitality Door"},
+	{"name": "Loot 10 ruined Constructs"},
+	{"name": "Obtain 100 Arrows"},
+	{"name": "Obtain 3 unique Elixirs"},
+	{"name": "Obtain 4 Bubbul Gems"},
+	{"name": "Obtain 6 Korok Seeds"},	
+	{"name": "Obtain 10 Construct Horns"},
+	{"name": "Activate 4 Towers"},
+	{"name": "Activate 7 Towers"},
+	{"name": "Defend Kara Kara Bazaar"},
+	{"name": "Free Yunobo"},
+	{"name": "Return Tulin's Bow"},
+	{"name": "Obtain a Kings Scale"},
+	{"name": "Kill a Miniboss Emitter/Cannon only"},
+	{"name": "Kill a Miniboss with Seal-Toy Weapon only"},
+	{"name": "Kill a White Lynel without Ancient Blades"},
+	{"name": "Kill a Phantom Ganon after parrying 4 attacks"},
+	{"name": "Kill 3 unique Hinox Types"},
+	{"name": "Kill 3 unique Talus Types"},
+	{"name": "Kill 3 unique Frox Types"},
+	{"name": "Kill a Molduga"},
+	{"name": "Kill a Gleeok"},
+	{"name": "Kill a King Gleeok"},
+	{"name": "Kill 4 Minibosses in the Sky"},
+	{"name": "Kill 4 Minibosses in the Depths"},
+	{"name": "Kill 4 Minibosses on the Surface"},
+	{"name": "Kill an enemy while controlling a vehicle"},
+	{"name": "Kill a Keese with an Ancient Blade"},
+	{"name": "Cook a Copius Seafood Skewer"},
+	{"name": "Cook a Copius Mushroom Skewer"},
+	{"name": "Cook a Noble Pursuit"},
+	{"name": "Complete the Secret Room"},
+	{"name": "Cook a Dark Curry"},
+	{"name": "Cook a Cake/Pie"},
+	{"name": "Clear 4 Blessing Shrines"},
+	{"name": "Clear 8 Shrines in the Sky"},
+	{"name": "Dye something Light Blue"},
+	{"name": "Clear Eventide Island"},
+	{"name": "Clear 4 Shrines on the Surface"},
+	{"name": "Clear 3 Proving Grounds"},
+	{"name": "Clear 10 Shrines"},
+	{"name": "Complete 5 Tree Stump Koroks"},
+	{"name": "Complete 'Strongest in the World'"},
+	{"name": "Complete 'Gloom-Borne Illness'"},
+	{"name": "Complete 'The Ultimate Dish?'"},
+	{"name": "Complete 'A New Champion's Tunic'"},
+	{"name": "Save Korok Forest"},
+	{"name": "Complete 'The High Spring and the Light Rings'"},
+	{"name": "Complete 'Ousting the Giants'"},
+	{"name": "Complete 2 Bring Peace-Quests"},
+	{"name": "Obtain 3.000 Rupees"},
+	{"name": "Obtain one of each Gemstone (7)"},
+	{"name": "Obtain a Magic Scepter, Rod and Staff"},
+	{"name": "Obtain all Mighty Zonaite Weapons + Zonaite Bow"},
+	{"name": "Obtain the Full Fierce Deity Set"},
+	{"name": "Obtain the Full Barbarian Set"},
+	{"name": "Obtain the Full Phantom Set"},
+	{"name": "Obtain the Full Ember Set"},
+	{"name": "Obtain the Full Frostbite Set"},
+	{"name": "Obtain the Full Yiga Clan Set"},
+	{"name": "Obtain a Zora, Rito, Gerudo and Goron Equipment"},
+	{"name": "Obtain 4 Legendary Equipment"},
+	{"name": "Obtain 3 Paraglider Fabrics"},
+	{"name": "Obtain 3 Schema Stones"},
+	{"name": "Obtain 4 Yiga Schematics"},
+	{"name": "Obtain 5 Ancient Blades"},
+	{"name": "Obtain 4 Sage's Wills"},
+	{"name": "Obtain 300 Poes"},
+	{"name": "Obtain all unique Like-Like Stones"},
+	{"name": "Obtain 5 Large Zonai Charges"},
+	{"name": "Obtain 10 Golden Apples"},
+	{"name": "Obtain 15 unique Zonai Devices"},
+	{"name": "Obtain 1 Glide armor piece"},
+	{"name": "Obtain 2 Coliseum Rewards"},
+	{"name": "Obtain 2 Stamina Vessels"},
+	{"name": "Obtain 3 Heart Containers"},
+	{"name": "Obtain 3 Energy Wells"},
+	{"name": "Obtain 5 Old Maps"},
+	{"name": "Obtain an Inventory Upgrade"},
+	{"name": "Obtain 3 3-Shot Bows"},
+	{"name": "Obtain 3 69+ Damage Weapons"},
+	{"name": "Obtain Majora's Mask"},
+	{"name": "Obtain the Biggoron's Sword"},
+	{"name": "Obtain the Fierce Deity Sword"},
+	{"name": "Obtain the Tunic of the Depths"},
+	{"name": "Obtain Zelda's Torch"},
+	{"name": "Obtain 2 Divine Helms"},
+	{"name": "Obtain Autobuild"},
+	{"name": "Obtain Camera"},
+	{"name": "Open 10 Chests in Wells"},
+	{"name": "Get Bokoblin Mask"},
+	{"name": "Open 5 Chests in the Fire Temple"},
+	{"name": "Open 5 Chests in the Wind Temple"},
+	{"name": "Open 5 Chests in the Water Temple"},
+	{"name": "Win a Ruby from Test of Strength"},
+	{"name": "Dye something Crimson"},
+	{"name": "Dye something Peach"},
+	{"name": "Discard 2 Diamonds in a Chasm"},
+	{"name": "Get all 3 Game Over Screens"},
+	{"name": "Tame a Giant Horse"},
+	{"name": "Tame the Golden Horse"},
+]
+</pre>>
+</details>
+<br>
+
 **Size Requirements:**
 
 - 3x3 needs at least 9 goals
@@ -132,6 +250,8 @@ Instructions and info are on the page and readme.
 Goals can be edited in the "kh_goals.js" file.
 
 # Credits
+
+Icons from https://www.khwiki.com and https://televo.github.io/kingdom-hearts-recollection/
 
 Kingdom Hearts 1 Bingo Goals created by the KH1 Rando Community: https://discord.gg/xPPCNDPdmG with their google sheets based generator: https://docs.google.com/spreadsheets/d/1v44eTIGJwF9aWlIVuuu6S1GxV2LNB39yG8mYXZc9GE8/edit#gid=930275297
 
