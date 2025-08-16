@@ -2078,9 +2078,13 @@ var kh1ImageList = [
     name: "Sabor",
     image: "img/kh1/Sabor.png",
   },
+  // {
+  //   name: "Stealth Sneak",
+  //   image: "img/kh1/StealthSneak.png",
+  // },
   {
-    name: "Stealth Sneak",
-    image: "img/kh1/StealthSneak.png",
+    name: "Clayton",
+    image: "img/kh1/Clayton.png",
   },
   {
     name: "Pot Centipede",
@@ -2111,7 +2115,7 @@ var kh1ImageList = [
     image: "img/kh1/Oogie.png",
   },
   {
-    name: "Shark",
+    name: "Glut",
     image: "img/kh1/Shark.png",
   },
   {
@@ -2124,7 +2128,7 @@ var kh1ImageList = [
   },
   {
     name: "Anti-Sora",
-    image: "img/kh1/AntiSora.png",
+    image: "img/kh1/AntiSora-v2.png",
   },
   {
     name: "Captain Hook",
@@ -2569,6 +2573,26 @@ var kh1ImageList = [
   {
     name: "Hercules",
     image: "img/kh1/Hercules.png",
+  },
+  {
+    name: "Riku (Destiny Islands)",
+    image: "img/kh1/RikuDI.png",
+  },
+  {
+    name: "Tidus",
+    image: "img/kh1/Tidus.png",
+  },
+  {
+    name: "Selphie",
+    image: "img/kh1/Selphie.png",
+  },
+  {
+    name: "Wakka",
+    image: "img/kh1/Wakka.png",
+  },
+  {
+    name: "Destiny Islands 3v1",
+    image: "img/kh1/BeachFight.png",
   },
 ];
 
