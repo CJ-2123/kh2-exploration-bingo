@@ -481,8 +481,19 @@ var bingo = function (size) {
       for (var i = 0; i < SIZE; i++) {
         items.push(encodeURIComponent($(cells[i]).html()));
       }
+      // window.open(
+      //   "bingo-popout.html#" + name + "=" + items.join(";;;"),
+      //   "_blank",
+      //   "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=220, height=460"
+      // );
       window.open(
-        "bingo-popout.html#" + name + "=" + items.join(";;;"),
+        "bingo-popout.html#" +
+          "imageGoals=" +
+          imageGoals + // pass boolean
+          "&line=" +
+          encodeURIComponent(name) +
+          "&items=" +
+          items.join(";;;"),
         "_blank",
         "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=220, height=460"
       );

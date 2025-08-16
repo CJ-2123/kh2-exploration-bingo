@@ -58,8 +58,8 @@
 
         td img {
             float: left;
-            max-width: 100%;
-            max-height: 38%;
+            max-width: 50px;
+            max-height: 50px;
             margin-right: 5px;
             vertical-align: middle;
         }
@@ -95,6 +95,44 @@
 
     <script type="text/javascript">
         $(function () {
+            const params = {};
+            location.hash
+                .substring(1)
+                .split("&")
+                .forEach(pair => {
+                    const [key, value] = pair.split("=");
+                    params[key] = decodeURIComponent(value);
+                });
+
+            const imageGoals = params.imageGoals === "true";
+            const line = params.line;
+            const items = params.items.split(";;;");
+
+            $('table th').html(line);
+
+            for (let a = 0; a < items.length; a++) {
+                let cellHtml = items[a];
+
+                if (imageGoals) {
+                    const imgMatch = cellHtml.match(/<img[^>]*>/i);
+                    if (imgMatch) {
+                        cellHtml = imgMatch[0];
+                    }
+                }
+
+                $('table').append('<tr><td>' + cellHtml + '</td></tr>');
+            }
+
+            $("td").toggle(
+                function () { $(this).addClass("greensquare"); },
+                function () { $(this).addClass("redsquare").removeClass("greensquare"); },
+                function () { $(this).removeClass("redsquare"); }
+            );
+        });
+    </script>
+
+    <!-- <script type="text/javascript">
+        $(function () {
             var data = document.location.hash.substring(1).split('=');
             var line = data[0];
             var items = data[1].split(';;;');
@@ -107,7 +145,7 @@
                 function () { $(this).removeClass("redsquare"); }
             );
         });
-    </script>
+    </script> -->
 
 </body>
 
