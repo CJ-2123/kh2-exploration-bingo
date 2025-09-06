@@ -1730,11 +1730,11 @@ function changeGame(selectedGame) {
     },
     kingdomhearts1: {
       options: `
+        <option value="kh1Image" selected="selected">AP Randomizer (Icons)</option>      
         <option value="kh1E">Easy</option>
-        <option value="kh1M" selected="selected">Normal</option>
+        <option value="kh1M">Normal</option>
         <option value="kh1H">Hard</option>
         <option value="kh1N">Nightmare</option>
-        <option value="kh1Image">AP Randomizer (Icons)</option>
       `,
       customUpload: "",
     },
