@@ -359,13 +359,13 @@ var bingo = function (size) {
       cardtype = "KH1 Nightmare";
       break;
     case "kh1Image":
-      cardtype = "KH1 Image";
+      cardtype = "KH1 Icons";
       break;
     case "bunter":
       cardtype = "Bunter";
       break;
     case "bunterImage":
-      cardtype = "Bunter Image";
+      cardtype = "Bunter Icons";
       break;
     case "combo":
       cardtype = "Combo";
@@ -1368,13 +1368,13 @@ var bingo = function (size) {
     case "KH1 Nightmare":
       var bingoBoard = kh1Nightmare;
       break;
-    case "KH1 Image":
+    case "KH1 Icons":
       var bingoBoard = kh1ImageList;
       break;
     case "Bunter":
       var bingoBoard = bunterList;
       break;
-    case "Bunter Image":
+    case "Bunter Icons":
       var bingoBoard = bunterImageList;
       break;
     case "Combo":
