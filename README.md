@@ -226,7 +226,7 @@ The list will stay uploaded to the site until you navigate away from the site, o
 	{"name": "Discard 2 Diamonds in a Chasm"},
 	{"name": "Get all 3 Game Over Screens"},
 	{"name": "Tame a Giant Horse"},
-	{"name": "Tame the Golden Horse"},
+	{"name": "Tame the Golden Horse"}
 ]
 </pre>>
 </details>
