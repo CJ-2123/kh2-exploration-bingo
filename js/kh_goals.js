@@ -2594,6 +2594,34 @@ var kh1ImageList = [
     name: "Destiny Islands 3v1",
     image: "img/kh1/BeachFight.png",
   },
+  {
+    name: "Pooh's Hunny Hunt",
+    image: "img/kh1/Piglet.png",
+  },
+  {
+    name: "Block Tigger",
+    image: "img/kh1/Rabbit.png",
+  },
+  {
+    name: "Pooh's Swing",
+    image: "img/kh1/Pooh.png",
+  },
+  {
+    name: "Tigger's Giant Pot",
+    image: "img/kh1/Tigger.png",
+  },
+  {
+    name: "Pooh's Muddy Path",
+    image: "img/kh1/Eeyore.png",
+  },
+  {
+    name: "Phil's Training (Barrels)",
+    image: "img/kh1/Phil.png",
+  },
+  {
+    name: "Final Rest",
+    image: "img/kh1/FinalRest.png",
+  },
 ];
 
 var comboList = [
