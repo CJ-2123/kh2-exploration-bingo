@@ -2151,7 +2151,7 @@ var kh1ImageList = [
     image: "img/kh1/Riku2.png",
   },
   {
-    name: "Behemoth",
+    name: "Behemoth (Hollow Bastion)",
     image: "img/kh1/Behemoth.png",
   },
   {
@@ -2564,7 +2564,7 @@ var kh1ImageList = [
   },
   {
     name: "Hades Cup 40th Seed",
-    image: "img/kh1/HadesCup40.png",
+    image: "img/kh1/HadesCupSeed40.png",
   },
   {
     name: "Hades Cup 44th Seed",
@@ -2621,6 +2621,114 @@ var kh1ImageList = [
   {
     name: "Final Rest",
     image: "img/kh1/FinalRest.png",
+  },
+  {
+    name: "Arch Behemoth (EOTW)",
+    image: "img/kh1/ArchBehemoth.png",
+  },
+  {
+    name: "Hades Cup 1st Seed",
+    image: "img/kh1/HadesCupSeed1.png",
+  },
+  {
+    name: "Jungle Slider 10 Fruits",
+    image: "img/kh1/Fruit10.png",
+  },
+  {
+    name: "Jungle Slider 20 Fruits",
+    image: "img/kh1/Fruit20.png",
+  },
+  {
+    name: "Jungle Slider 30 Fruits",
+    image: "img/kh1/Fruit30.png",
+  },
+  {
+    name: "Jungle Slider 40 Fruits",
+    image: "img/kh1/Fruit40.png",
+  },
+  {
+    name: "Jungle Slider 50 Fruits",
+    image: "img/kh1/Fruit50.png",
+  },
+  {
+    name: "4 Blue Trinities",
+    image: "img/kh1/Blue4.png",
+  },
+  {
+    name: "8 Blue Trinities",
+    image: "img/kh1/Blue8.png",
+  },
+  {
+    name: "12 Blue Trinities",
+    image: "img/kh1/Blue12.png",
+  },
+  {
+    name: "16 Blue Trinities",
+    image: "img/kh1/Blue16.png",
+  },
+  {
+    name: "2 Red Trinities",
+    image: "img/kh1/Red2.png",
+  },
+  {
+    name: "3 Red Trinities",
+    image: "img/kh1/Red3.png",
+  },
+  {
+    name: "4 Red Trinities",
+    image: "img/kh1/Red4.png",
+  },
+  {
+    name: "5 Red Trinities",
+    image: "img/kh1/Red5.png",
+  },
+  {
+    name: "2 Green Trinities",
+    image: "img/kh1/Green2.png",
+  },
+  {
+    name: "4 Green Trinities",
+    image: "img/kh1/Green4.png",
+  },
+  {
+    name: "6 Green Trinities",
+    image: "img/kh1/Green6.png",
+  },
+  {
+    name: "8 Green Trinities",
+    image: "img/kh1/Green8.png",
+  },
+  {
+    name: "1 Yellow Trinities",
+    image: "img/kh1/Yellow1.png",
+  },
+  {
+    name: "2 Yellow Trinities",
+    image: "img/kh1/Yellow1.png",
+  },
+  {
+    name: "3 Yellow Trinities",
+    image: "img/kh1/Yellow1.png",
+  },
+  {
+    name: "4 Yellow Trinities",
+    image: "img/kh1/Yellow1.png",
+  },
+  {
+    name: "2 White Trinities",
+    image: "img/kh1/White2.png",
+  },
+  {
+    name: "4 White Trinities",
+    image: "img/kh1/White4.png",
+  },
+  {
+    name: "6 White Trinities",
+    image: "img/kh1/White6.png",
+  },
+  {
+    name: "8 White Trinities",
+    image: "img/kh1/White8.png",
   },
 ];
 
